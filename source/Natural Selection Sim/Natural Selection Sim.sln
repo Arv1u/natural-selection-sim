@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36705.20 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Natural Selection Sim", "Natural Selection Sim\Natural Selection Sim.csproj", "{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6F26009-0116-45A7-8364-D3FDF6DDF8D7}
+	EndGlobalSection
+EndGlobal
