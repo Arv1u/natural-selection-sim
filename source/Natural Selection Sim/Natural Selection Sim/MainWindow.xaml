@@ -5,8 +5,149 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Natural_Selection_Sim"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="Natural Selection Sim" 
+        Height="auto" Width="auto"
+        Background="#222222">
+    <Viewbox Stretch="Uniform">
+        <!--Parent Grid-->
+        <Grid
+            Width="1280"
+            Height="720">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="60*"/>
+            </Grid.RowDefinitions>
+            
+            <!--Header and controls grid-->
+            <Grid Grid.Column="0"
+                  Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.3*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBlock 
+                    Text="Natural Selection" 
+                    Foreground="White"
+                    FontSize="40"
+                    Grid.ColumnSpan="3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontWeight="Bold"/>
+                <Button Name="StartButton"
+                        Command="{Binding StartCommand}"
+                        Content="Start"
+                        FontSize="30"
+                        FontWeight="Bold"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Margin="10"
+                        Background="Green"
+                        />
+                <Button Name="PauseButton"
+                        Command="{Binding PauseCommand}"
+                        Content="Pause"
+                        FontSize="30"
+                        FontWeight="Bold"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Margin="10"
+                        Background="Yellow"
+                        />
+                <Button Name="ResetButton"
+                        Command="{Binding ResetCommand}"
+                        Content="Start"
+                        FontSize="30"
+                        FontWeight="Bold"
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Margin="10"
+                        Background="Red"
+                        />
+                <!--display timesteps passed-->
+                <StackPanel Grid.Row="2"
+                            Orientation="Horizontal">
+                    <Label Content="Time Step: "
+                           Grid.Row="2"
+                           FontSize="30"
+                           Margin="0"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"/>
+                    <TextBlock
+                        Text="{Binding CurrentTimeStep}"
+                        d:Text="20"
+                        Grid.Row="2"
+                        FontSize="30"
+                        Foreground="White"
+                        Margin="0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        />
+                </StackPanel>
+                <!--input simulation speed-->
+                <StackPanel Grid.Column="2"
+                            Grid.Row="2">
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 0 0 10">
+                    <Label Content="Steps/sec: "
+                           FontSize="30"
+                           Margin="0"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"/>
+                    <TextBlock 
+                        Text="{Binding ElementName=StepsPerSecondSlider, Path=Value}"
+                        d:Text="30"
+                        Foreground="White"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="30"/>
+                </StackPanel>
+                    
+                <Slider Name="StepsPerSecondSlider"
+                        Minimum="1"
+                            Maximum="100"
+                            Value="{Binding StepsPerSecond, Mode=TwoWay}"
+                            IsSnapToTickEnabled="True"
+                            Grid.Column="2"
+                            Grid.Row="2"/>
+                </StackPanel>
+            </Grid>
+            
+            <!--Results Simulation table-->
+            <Grid Grid.Row="1">
+                <Grid Margin="30"
+                      >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock
+                        Grid.Column="1"
+                        />
+                </Grid>
+            </Grid>
+        </Grid>
+    </Viewbox>
 </Window>
