@@ -4,6 +4,16 @@
              xmlns:local="clr-namespace:Natural_Selection_Sim"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/ResetButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/PauseButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/StartButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/SliderStyle.xaml"/>
+                <ResourceDictionary Source="/Styles/TableHeaders.xaml"/>
+                <ResourceDictionary Source="/Styles/TableData.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    
     </Application.Resources>
 </Application>
