@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace OOP_Projekt.GameData.MVVM
+namespace Natural_Selection_Sim.MVVM
 {
     public class RelayCommand : ICommand
     {

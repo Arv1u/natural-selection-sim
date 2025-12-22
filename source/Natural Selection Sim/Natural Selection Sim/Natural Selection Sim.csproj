@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFramework>net8.0-windows</TargetFramework>
+		<TargetFramework>net9.0-windows</TargetFramework>
 		<RootNamespace>Natural_Selection_Sim</RootNamespace>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -10,9 +10,7 @@
 	<ItemGroup>
 		<Folder Include="Models\" />
 		<Folder Include="UserControls\" />
-		<Folder Include="ViewModels\" />
-		<Folder Include="Views\" />
 	</ItemGroup>
 	<ItemGroup>
-  <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
-</ItemGroup> </Project>
+	  <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-rc5.4" />
+	</ItemGroup> </Project>
