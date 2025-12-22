@@ -20,7 +20,9 @@ namespace Natural_Selection_Sim.ViewModels
                 Name = name,
                 Values = values,
                 Fill = null,
-                GeometrySize = 4
+                GeometrySize = 0,
+                LineSmoothness = 0,
+                
             };
         }
         public void AddValue(int value)

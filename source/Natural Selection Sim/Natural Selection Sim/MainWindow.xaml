@@ -7,17 +7,16 @@
        xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
         mc:Ignorable="d"
         Title="Natural Selection Sim" 
-        Height="auto" Width="auto"
+        Height="720" Width="1280"
+        MinHeight="700" MinWidth="1100"
         Background="#222222">
     <Window.Resources>
         
         
     </Window.Resources>
-    <Viewbox Stretch="Uniform">
+    
         <!--Parent Grid-->
-        <Grid
-            Width="1280"
-            Height="720">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
@@ -80,8 +79,11 @@
                         Margin="10" 
                         />
                 <!--display timesteps passed-->
-                <StackPanel Grid.Row="2"
-                            Orientation="Horizontal">
+            <Grid Grid.Row="2" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
                     <Label Content="Time Step: "
                            Grid.Row="2"
                            FontSize="30"
@@ -89,7 +91,7 @@
                            Foreground="White"
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"/>
-                    <TextBlock
+                    <TextBlock Grid.Column="1"
                         Text="{Binding CurrentTimeStep}"
                         d:Text="20"
                         Grid.Row="2"
@@ -99,35 +101,46 @@
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         />
-                </StackPanel>
+            </Grid>
+                
                 <!--input simulation speed-->
-                <StackPanel Grid.Column="2"
-                            Grid.Row="2">
-                <StackPanel Orientation="Horizontal"
-                            Margin="0 0 0 10">
-                    <Label Content="Steps/sec: "
-                           FontSize="30"
-                           Margin="0"
-                           Foreground="White"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center"/>
-                    <TextBlock 
-                        Text="{Binding ElementName=StepsPerSecondSlider, Path=Value}"
-                        d:Text="30"
-                        Foreground="White"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        FontSize="30"/>
-                </StackPanel>
-                    
+                <Grid Grid.Column="2"
+                      Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto "/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Steps/sec: "
+                                   FontSize="30"
+                                   
+                                   Foreground="White"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"/>
+                        <TextBlock 
+                                Text="{Binding ElementName=StepsPerSecondSlider, Path=Value}"
+                                d:Text="30"
+                                Foreground="White"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontSize="30"
+                                Grid.Column="1"
+                            />
+                    </Grid>
                 <Slider Style="{DynamicResource SliderStyle}" Name="StepsPerSecondSlider"
                         Minimum="1"
-                            Maximum="100"
-                            Value="{Binding TimeStepsPerSecond, Mode=TwoWay}"
-                            IsSnapToTickEnabled="True"
-                            Grid.Column="2"
-                            Grid.Row="2"/>
-                </StackPanel>
+                        Maximum="1000"
+                        Value="{Binding TimeStepsPerSecond, Mode=TwoWay}"
+                        IsSnapToTickEnabled="True"
+                        Grid.Row="1"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Center"/>
+            </Grid>
+            
             </Grid>
             
             <!--Results Simulation table-->
@@ -191,13 +204,19 @@
             </Grid>
                 <!--LineGraph-->
             <lvc:CartesianChart Name="chart"
-                    Series="{Binding Series}" 
-                    TooltipPosition="Hidden"
-                    EasingFunction="{x:Null}"
+                                Series="{Binding Series}" 
+                                EasingFunction="{x:Null}"
                                 Grid.Column="1"
                                 Grid.Row="1"
-                                DataContext="{Binding LineChartViewModel}">
+                                DataContext="{Binding LineChartViewModel}"
+                                SnapsToDevicePixels="True"
+                                UseLayoutRounding="True"
+                                RenderOptions.BitmapScalingMode="NearestNeighbor"
+                                VerticalAlignment="Stretch"
+                                HorizontalAlignment="Stretch"
+                                IsEnabled="True"
+                                Visibility="Hidden">
             </lvc:CartesianChart>
         </Grid>
-    </Viewbox>
+    
 </Window>

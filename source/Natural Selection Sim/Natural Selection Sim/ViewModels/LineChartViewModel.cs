@@ -12,7 +12,6 @@ namespace Natural_Selection_Sim.ViewModels
 {
     public class LineChartViewModel : PropertyChangedBase
     {
-		//private ObservableCollection< LineSeries<int>?> series;
 
 		public ObservableCollection<LineSeries<int>?> Series { get; set; } = new();
 

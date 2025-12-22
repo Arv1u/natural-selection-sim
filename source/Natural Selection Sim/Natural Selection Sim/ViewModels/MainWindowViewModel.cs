@@ -4,22 +4,18 @@ namespace Natural_Selection_Sim.ViewModels
 {
     public class MainWindowViewModel : PropertyChangedBase
     {
-		private LineChartViewModel lineChartViewModel;
 
-		public LineChartViewModel LineChartViewModel
-		{
-			get { return lineChartViewModel; }
-			set { lineChartViewModel = value; }
-		}
+		public LineChartViewModel LineChartViewModel { get; }
 		private int timeStepsPerSecond;
 
 		public int TimeStepsPerSecond
 		{
 			get { return timeStepsPerSecond; }
 			set 
-			{ 
+			{
 				timeStepsPerSecond = value;
-				timer.Interval = 1000 / value;
+				int secondInMillis = 1000;
+				timer.Interval = secondInMillis / value; // update timer interval on changed slider
 				OnPropertyChanged();
 			}
 		}
@@ -37,7 +33,7 @@ namespace Natural_Selection_Sim.ViewModels
 		public RelayCommand StartCommand { get; } 
 		public RelayCommand PauseCommand { get; }
 		public RelayCommand ResetCommand { get; }
-		public System.Timers.Timer timer = new System.Timers.Timer(1000);
+		private System.Timers.Timer timer = new System.Timers.Timer(1000);
 
 		public MainWindowViewModel()
 		{
@@ -51,8 +47,8 @@ namespace Natural_Selection_Sim.ViewModels
 			PauseCommand = new RelayCommand(_ => PauseSimulation());
 			ResetCommand = new RelayCommand(_ => ResetSimulation());
         }
-		private int data;
 
+		private int data;
 		public int Data
 		{
 			get { return data; }
@@ -64,13 +60,19 @@ namespace Natural_Selection_Sim.ViewModels
 		{
 			LineChartViewModel.Reset();
             LineChartViewModel.AddData(new ChartData("Series1"));
+            LineChartViewModel.AddData(new ChartData("Series2"));
 			Data = 0;
+			data2 = 0;
+			CurrentTimeStep = 0;
         }
+		private int data2;
         private void OnTimerTick(Object? source, ElapsedEventArgs e)
 		{
 			Random rnd = new();
 			Data += rnd.Next(-10, 11);
+			data2 += rnd.Next(-10, 11);
             LineChartViewModel.ChartData[0].AddValue(Data);
+            LineChartViewModel.ChartData[1].AddValue(data2);
 			CurrentTimeStep++;
         }
 		private void StartSimulation()
