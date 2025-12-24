@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Natural_Selection_Sim"
-       xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
+        xmlns:ctrl="clr-namespace:Natural_Selection_Sim.UserControls"
+        xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
         mc:Ignorable="d"
         Title="Natural Selection Sim" 
         Height="720" Width="1280"
@@ -14,209 +15,205 @@
         
         
     </Window.Resources>
-    
-        <!--Parent Grid-->
-        <Grid>
+   
+    <!--Parent Grid-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+            
+        <!--Header and controls grid-->
+        <Grid Grid.Column="0"
+                Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40*"/>
-                <RowDefinition Height="60*"/>
+                <RowDefinition Height="1.3*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            
-            <!--Header and controls grid-->
-            <Grid Grid.Column="0"
-                  Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1.3*"/>
-                    <RowDefinition Height="1*"/>
-                    <RowDefinition Height="1*"/>
-                </Grid.RowDefinitions>
-                <TextBlock 
-                    Text="Natural Selection" 
-                    Foreground="White"
-                    FontSize="40"
-                    Grid.ColumnSpan="3"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    FontWeight="Bold"/>
-                <Button
-                        Style="{StaticResource StartButton}"
-                        Command="{Binding StartCommand}"
-                        Content="Start"
-                        FontSize="30"
-                        FontWeight="Bold"
-                        Grid.Column="0"
-                        Grid.Row="1"
-                        Margin="10"
-                        />
-                <Button Name="PauseButton"
-                        Style="{StaticResource PauseButton}"
-                        Command="{Binding PauseCommand}"
-                        Content="Pause"
-                        FontSize="30"
-                        FontWeight="Bold"
-                        Grid.Column="1"
-                        Grid.Row="1"
-                        Margin="10"
+            <TextBlock 
+                Text="Natural Selection" 
+                Foreground="White"
+                FontSize="40"
+                Grid.ColumnSpan="3"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontWeight="Bold"/>
+            <Button
+                    Style="{StaticResource StartButton}"
+                    Command="{Binding StartCommand}"
+                    Content="Start"
+                    FontSize="30"
+                    FontWeight="Bold"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Margin="10"
+                    />
+            <Button Name="PauseButton"
+                    Style="{StaticResource PauseButton}"
+                    Command="{Binding PauseCommand}"
+                    Content="Pause"
+                    FontSize="30"
+                    FontWeight="Bold"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="10"
                         
-                        />
-                <Button Name="ResetButton"
-                        Style="{StaticResource ResetButton}"
-                        Command="{Binding ResetCommand}"
-                        Content="Reset"
-                        FontSize="30"
-                        FontWeight="Bold"
-                        Grid.Column="2"
-                        Grid.Row="1"
-                        Margin="10" 
-                        />
-                <!--display timesteps passed-->
+                    />
+            <Button Name="ResetButton"
+                    Style="{StaticResource ResetButton}"
+                    Command="{Binding ResetCommand}"
+                    Content="Reset"
+                    FontSize="30"
+                    FontWeight="Bold"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    Margin="10" 
+                    />
+            <!--display timesteps passed-->
             <Grid Grid.Row="2" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
-                    <Label Content="Time Step: "
-                           Grid.Row="2"
-                           FontSize="30"
-                           Margin="10 0 0 0"
-                           Foreground="White"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center"/>
-                    <TextBlock Grid.Column="1"
-                        Text="{Binding CurrentTimeStep}"
-                        d:Text="20"
+                <Label Content="Time Step: "
                         Grid.Row="2"
                         FontSize="30"
+                        Margin="10 0 0 0"
                         Foreground="White"
-                        Margin="0"
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
-                        />
+                        VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="1"
+                    Text="{Binding CurrentTimeStep}"
+                    d:Text="20"
+                    Grid.Row="2"
+                    FontSize="30"
+                    Foreground="White"
+                    Margin="0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    />
             </Grid>
-                
-                <!--input simulation speed-->
-                <Grid Grid.Column="2"
-                      Grid.Row="2">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="auto "/>
-                        </Grid.ColumnDefinitions>
-                        <Label Content="Steps/sec: "
-                                   FontSize="30"
+            <!--input simulation speed-->
+            <Grid Grid.Column="2"
+                  Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto "/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Steps/sec: "
+                                FontSize="30"
                                    
-                                   Foreground="White"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Center"/>
-                        <TextBlock 
-                                Text="{Binding ElementName=StepsPerSecondSlider, Path=Value}"
-                                d:Text="30"
                                 Foreground="White"
                                 HorizontalAlignment="Left"
-                                VerticalAlignment="Center"
-                                FontSize="30"
-                                Grid.Column="1"
-                            />
-                    </Grid>
-                <Slider Style="{DynamicResource SliderStyle}" Name="StepsPerSecondSlider"
-                        Minimum="1"
-                        Maximum="1000"
-                        Value="{Binding TimeStepsPerSecond, Mode=TwoWay}"
-                        IsSnapToTickEnabled="True"
-                        Grid.Row="1"
-                        HorizontalAlignment="Stretch"
-                        VerticalAlignment="Center"/>
-            </Grid>
-            
-            </Grid>
-            
-            <!--Results Simulation table-->
-            <Grid Grid.Row="1" >
-                <Grid Margin="30" ShowGridLines="True">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <!--Row/Column Headers-->
-                    <TextBlock Style="{StaticResource TableHeaders}"
-                               Text="Species"/>
-                    <TextBlock Style="{StaticResource TableHeaders}"
-                               Grid.Row="1"
-                               Text="Population"/>
-                    <TextBlock Style="{StaticResource TableHeaders}"
-                               Grid.Row="2"
-                               Text="Birthrate"/>
-                    <TextBlock Style="{StaticResource TableHeaders}"
-                               Grid.Row="3"
-                               Text="Deathrate"/>
-                    <TextBlock Style="{StaticResource TableHeaders}"
-                               Grid.Row="4"
-                               Text="Mutationrate"/>
-                    <TextBlock Style="{StaticResource TableHeaders}"
-                               Grid.Row="5"
-                               Text="Speed"/>
-                    <TextBlock Style="{StaticResource TableHeaders}"
-                               Grid.Row="6"
-                               Text="Size"/>
-                    <TextBlock Style="{StaticResource TableHeaders}"
-                               Grid.Column="1"
-                               Text="Herbivore"/>
-                    <TextBlock Style="{StaticResource TableHeaders}"
-                               Grid.Column="2"
-                               Text="Omnivore"/>
-                    <TextBlock Style="{StaticResource TableHeaders}"
-                               Grid.Column="3"
-                               Text="Carnivore"/>
-                    <!--Simulation Data-->
-                    <TextBlock Grid.Column="1"
-                               Grid.Row="1"
-                               Text="{Binding Data}"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
-                               Foreground="White"/>
-
+                                VerticalAlignment="Center"/>
+                    <TextBlock 
+                            Text="{Binding ElementName=StepsPerSecondSlider, Path=Value}"
+                            d:Text="30"
+                            Foreground="White"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            FontSize="30"
+                            Grid.Column="1"
+                        />
                 </Grid>
-                
+                <Slider Style="{DynamicResource SliderStyle}" Name="StepsPerSecondSlider"
+                    Minimum="1"
+                    Maximum="1000"
+                    Value="{Binding TimeStepsPerSecond, Mode=TwoWay}"
+                    IsSnapToTickEnabled="True"
+                    Grid.Row="1"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center"/>
             </Grid>
-                <!--LineGraph-->
-            <lvc:CartesianChart Name="chart"
-                                Series="{Binding Series}" 
-                                EasingFunction="{x:Null}"
-                                Grid.Column="1"
-                                Grid.Row="1"
-                                DataContext="{Binding LineChartViewModel}"
-                                SnapsToDevicePixels="True"
-                                UseLayoutRounding="True"
-                                RenderOptions.BitmapScalingMode="NearestNeighbor"
-                                VerticalAlignment="Stretch"
-                                HorizontalAlignment="Stretch"
-                                IsEnabled="True"
-                                Visibility="Hidden">
-            </lvc:CartesianChart>
         </Grid>
+            
+        <!--Results Simulation table-->
+        <Grid Grid.Row="1" >
+            <Grid Margin="30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!--Row/Column Headers-->
+                <ctrl:TableHeader x:Name="TopLeftBorders"/>
+
+                <ctrl:TableHeader HeaderName="Herbivore" Grid.Column="1"/>
+                <ctrl:TableHeader HeaderName="Omnivore" Grid.Column="2"/>
+                <ctrl:TableHeader HeaderName="Carnivore" Grid.Column="3"/>
+                <ctrl:TableHeader HeaderName="Population" Grid.Row="1"/>
+                <ctrl:TableHeader HeaderName="Birthrate Ø" Grid.Row="2"/>
+                <ctrl:TableHeader HeaderName="Deathrate Ø" Grid.Row="3"/>
+                <ctrl:TableHeader HeaderName="Mutationrate Ø" Grid.Row="4"/>
+                <ctrl:TableHeader HeaderName="Speed Ø" Grid.Row="5"/>
+                <ctrl:TableHeader HeaderName="Size Ø" Grid.Row="6"/>
+                <!--Simulation Data-->
+                
+                
+                <ctrl:TableData Data="{Binding HerbivorePopulation}" Grid.Column="1" Grid.Row="1"/>
+                <ctrl:TableData Data="{Binding HerbivoreBirtrateAvg}" Grid.Column="1" Grid.Row="2"/>
+                <ctrl:TableData Data="{Binding HerbivoreDeathrateAvg}" Grid.Column="1" Grid.Row="3"/>
+                <ctrl:TableData Data="{Binding HerbivoreMutationrateAvg}" Grid.Column="1" Grid.Row="4"/>
+                <ctrl:TableData Data="{Binding HerbivoreSpeedAvg}" Grid.Column="1" Grid.Row="5"/>
+                <ctrl:TableData Data="{Binding HerbivoreSizeAvg}" Grid.Column="1" Grid.Row="6"/>
+                
+                <ctrl:TableData Data="{Binding OmnivorePopulation}" Grid.Column="2" Grid.Row="1"/>
+                <ctrl:TableData Data="{Binding OmnivoreBirtrateAvg}" Grid.Column="2" Grid.Row="2"/>
+                <ctrl:TableData Data="{Binding OmnivoreDeathrateAvg}" Grid.Column="2" Grid.Row="3"/>
+                <ctrl:TableData Data="{Binding OmnivoreMutationrateAvg}" Grid.Column="2" Grid.Row="4"/>
+                <ctrl:TableData Data="{Binding OmnivoreSpeedAvg}" Grid.Column="2" Grid.Row="5"/>
+                <ctrl:TableData Data="{Binding OmnivoreSizeAvg}" Grid.Column="2" Grid.Row="6"/>
+                
+                <ctrl:TableData Data="{Binding CarnivorePopulation}" Grid.Column="3" Grid.Row="1"/>
+                <ctrl:TableData Data="{Binding CarnivoreBirtrateAvg}" Grid.Column="3" Grid.Row="2"/>
+                <ctrl:TableData Data="{Binding CarnivoreDeathrateAvg}" Grid.Column="3" Grid.Row="3"/>
+                <ctrl:TableData Data="{Binding CarnivoreMutationrateAvg}" Grid.Column="3" Grid.Row="4"/>
+                <ctrl:TableData Data="{Binding CarnivoreSpeedAvg}" Grid.Column="3" Grid.Row="5"/>
+                <ctrl:TableData Data="{Binding CarnivoreSizeAvg}" Grid.Column="3" Grid.Row="6"/>
+                
+
+            </Grid>
+        </Grid>
+            <!--LineGraph-->
+        <lvc:CartesianChart Name="chart"
+                            Series="{Binding Series}" 
+                            EasingFunction="{x:Null}"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            DataContext="{Binding LineChartViewModel}"
+                            SnapsToDevicePixels="True"
+                            UseLayoutRounding="True"
+                            RenderOptions.BitmapScalingMode="NearestNeighbor"
+                            VerticalAlignment="Stretch"
+                            HorizontalAlignment="Stretch"
+                            IsEnabled="True"
+                            >
+        </lvc:CartesianChart>
+    </Grid>
     
 </Window>

@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="/Styles/SliderStyle.xaml"/>
                 <ResourceDictionary Source="/Styles/TableHeaders.xaml"/>
                 <ResourceDictionary Source="/Styles/TableData.xaml"/>
+                <ResourceDictionary Source="/Styles/DataBorder.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     
