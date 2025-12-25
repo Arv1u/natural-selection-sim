@@ -5,7 +5,6 @@ namespace Natural_Selection_Sim.ViewModels
 {
     public class SimulationViewModel : PropertyChangedBase
     {
-
 		static public LineChartViewModel LineChartViewModel { get; } = new();
 		public SpeciesData Herbivore { get; } = new("Herbivore",SKColors.Green, LineChartViewModel);
 		public SpeciesData Omnivore { get; } = new("Omnivore", SKColors.Orange, LineChartViewModel);

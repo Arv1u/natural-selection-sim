@@ -218,10 +218,7 @@ namespace Natural_Selection_Sim.ViewModels
                 IsVisibleAtLegend = true,
                 Stroke = new SolidColorPaint(Color)
             };
-            LineChartVM.AddSeries(Series);
-            
-            PopulationCurrent = PopulationStart;
-            BirthRateAvg = BirthRateStart;
+            LineChartVM.AddSeries(Series);    
         }
         public void Update(int newPopulation, double newBirthRateAvg, double newDeathRateAvg, double newMutationRateAvg, int newSpeedAvg, int newSizeAvg)
         {

@@ -134,7 +134,7 @@
                 </Grid>
                 <Slider Style="{DynamicResource SliderStyle}" Name="StepsPerSecondSlider"
                     Minimum="1"
-                    Maximum="1000"
+                    Maximum="100"
                     Value="{Binding TimeStepsPerSecond, Mode=TwoWay}"
                     IsSnapToTickEnabled="True"
                     Grid.Row="1"
