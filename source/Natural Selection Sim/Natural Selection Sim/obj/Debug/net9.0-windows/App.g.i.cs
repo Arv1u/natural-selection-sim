@@ -60,7 +60,7 @@ namespace Natural_Selection_Sim {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/Natural Selection Sim;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Natural Selection Sim;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

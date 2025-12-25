@@ -17,9 +17,7 @@ namespace Natural_Selection_Sim.ViewModels
     {
 
 		public ObservableCollection<LineSeries<int>?> Series { get; set; } = new();
-
 		public ObservableCollection<Axis> XAxis { get; set; } = new();
-		public List<ChartData> ChartData = new();
 		public LineChartViewModel()
 		{
 
@@ -28,39 +26,42 @@ namespace Natural_Selection_Sim.ViewModels
 		{
 			new Axis
 			{
-				Name = "X Axis",
-				LabelsPaint = new SolidColorPaint(SKColors.Red),
-				SeparatorsPaint = new SolidColorPaint(SKColors.Red),
-				TicksPaint = new SolidColorPaint(SKColors.Red),
-				TextSize = 14
-				, ShowSeparatorLines = false
+				Name = "Population",
 				
-			}
-		};
+				TextSize = 14,
+				NamePaint = new SolidColorPaint(SKColors.White),
+				LabelsPaint = new SolidColorPaint(SKColors.Gray)
+
+
+            }
+        };
         public Axis[] YAxes { get; set; } = new[]
 		{
 			new Axis
 			{
-				Name = "Y Axis",
-				LabelsPaint = new SolidColorPaint(SKColors.Blue),
-				SeparatorsPaint = new SolidColorPaint(SKColors.Blue),
-				TicksPaint = new SolidColorPaint(SKColors.Blue),
+				Name = "Time",
+				
                 TextSize = 14,
-				ShowSeparatorLines = false
+				NamePaint = new SolidColorPaint(SKColors.White),
+
+                LabelsPaint = new SolidColorPaint(SKColors.Gray)
 
             }
-		};
+        };
+        public SolidColorPaint LedgendTextPaint { get; set; } =
+        new SolidColorPaint
+        {
+            Color = SKColors.White,
+        };
 
-        public void AddData(ChartData data)
+
+        public void AddSeries(LineSeries<int> data)
 		{
-			Series?.Add(data.Series);
-			
-			ChartData.Add(data);
+			Series?.Add(data);
 		}
 		public void Reset()
 		{
 			Series.Clear();
-			ChartData.Clear();
         }
 	}
 }

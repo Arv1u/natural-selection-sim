@@ -22,6 +22,7 @@ namespace Natural_Selection_Sim.ViewModels
                 Fill = null,
                 GeometrySize = 0,
                 LineSmoothness = 0,
+                IsVisibleAtLegend = true,
                 
             };
         }

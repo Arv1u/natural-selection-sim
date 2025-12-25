@@ -49,6 +49,8 @@ C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection S
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableData.baml
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableHeader.baml
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
-C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableNumInput.g.cs
-C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableNumInput.baml
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Natural Selection Sim_Content.g.cs
+C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableIntInput.g.cs
+C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableIntInput.baml
+C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TablePercInput.g.cs
+C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TablePercInput.baml

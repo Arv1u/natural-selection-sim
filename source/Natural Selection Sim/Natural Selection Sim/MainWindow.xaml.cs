@@ -13,7 +13,7 @@ namespace Natural_Selection_Sim
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+            DataContext = new SimulationViewModel();
 
         }
     }   

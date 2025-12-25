@@ -58,4 +58,10 @@
 		<TrimmerRootAssembly Include="LiveChartsCore.SkiaSharpView" />
 		<TrimmerRootAssembly Include="SkiaSharp" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="UserControls\TablePercInput.xaml.cs">
+	    <SubType>Code</SubType>
+	  </Compile>
+	</ItemGroup>
 </Project>

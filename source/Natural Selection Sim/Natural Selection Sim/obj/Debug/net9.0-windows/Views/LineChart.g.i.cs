@@ -53,7 +53,7 @@ namespace Natural_Selection_Sim.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Natural Selection Sim;V1.0.0.0;component/views/linechart.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Natural Selection Sim;component/views/linechart.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\LineChart.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
