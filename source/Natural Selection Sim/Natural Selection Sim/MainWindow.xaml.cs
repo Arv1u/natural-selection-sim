@@ -1,4 +1,6 @@
-﻿using Natural_Selection_Sim.ViewModels;
+﻿using LiveChartsCore.SkiaSharpView.WPF;
+using LiveChartsCore.Themes;
+using Natural_Selection_Sim.ViewModels;
 using System.Windows;
 
 namespace Natural_Selection_Sim
@@ -12,6 +14,7 @@ namespace Natural_Selection_Sim
         {
             InitializeComponent();
             DataContext = new MainWindowViewModel();
+
         }
     }   
 }

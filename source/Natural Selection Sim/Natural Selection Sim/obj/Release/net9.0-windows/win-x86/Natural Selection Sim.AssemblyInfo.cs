@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Natural Selection Sim")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5cbad8cd0f6f9e1c7e2ef8620f83e11643941af9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09979a8c2337497ef66d93386ee3f301db060ffc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Natural Selection Sim")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Natural Selection Sim")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

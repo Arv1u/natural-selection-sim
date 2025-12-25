@@ -7,6 +7,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+       
                 <ResourceDictionary Source="/Styles/ResetButtonStyles.xaml"/>
                 <ResourceDictionary Source="/Styles/PauseButtonStyles.xaml"/>
                 <ResourceDictionary Source="/Styles/StartButtonStyles.xaml"/>
@@ -14,6 +15,8 @@
                 <ResourceDictionary Source="/Styles/TableHeaders.xaml"/>
                 <ResourceDictionary Source="/Styles/TableData.xaml"/>
                 <ResourceDictionary Source="/Styles/DataBorder.xaml"/>
+                
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     

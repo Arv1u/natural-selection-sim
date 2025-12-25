@@ -1,6 +1,7 @@
 ﻿using LiveChartsCore;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
+using LiveChartsCore.SkiaSharpView.WPF;
 using Natural_Selection_Sim.MVVM;
 using SkiaSharp;
 using System;
@@ -22,15 +23,15 @@ namespace Natural_Selection_Sim.ViewModels
 		public LineChartViewModel()
 		{
 
-		}
-		public Axis[] XAxes { get; set; } = new[]
+        }
+        public Axis[] XAxes { get; set; } = new[]
 		{
 			new Axis
 			{
 				Name = "X Axis",
-				LabelsPaint = new SolidColorPaint(SKColors.Black),
-				SeparatorsPaint = new SolidColorPaint(SKColors.Gray),
-				TicksPaint = new SolidColorPaint(SKColors.Gray),
+				LabelsPaint = new SolidColorPaint(SKColors.Red),
+				SeparatorsPaint = new SolidColorPaint(SKColors.Red),
+				TicksPaint = new SolidColorPaint(SKColors.Red),
 				TextSize = 14
 			}
 		};
