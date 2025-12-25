@@ -60,18 +60,18 @@
                                       PercentValue="{Binding BirthRateStart, Mode=TwoWay}"/>
             </Border>
             <Border Grid.Column="1" Grid.Row="3" BorderThickness="1 0 1 1">
-                <local:TablePercInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                <local:TablePercInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" PercentValue="{Binding DeathRateStart, Mode=TwoWay}"/>
             </Border>
             <Border Grid.Column="1" Grid.Row="4" BorderThickness="1 0 1 1">
-                <local:TablePercInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                <local:TablePercInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" PercentValue="{Binding MutationRateStart, Mode=TwoWay}"/>
             </Border>
             <Border Grid.Column="1" Grid.Row="5" BorderThickness="1 0 1 1">
 
-                <local:TablePercInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                <local:TableIntInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" IntInput="{Binding SpeedStart, Mode=TwoWay}" />
             </Border >
             <Border Grid.Column="1" Grid.Row="6" BorderThickness="1 0 1 1">
-                <local:TablePercInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}"
-                                      />
+                <local:TableIntInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                      IntInput="{Binding SizeStart, Mode=TwoWay}"/>
             </Border>
             </Grid>
         </Grid>

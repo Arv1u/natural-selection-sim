@@ -176,24 +176,24 @@
             <!--Simulation Data-->
 
 
-            <ctrl:TableData Data="{Binding Herbivore.Population}" Grid.Column="1" Grid.Row="1"/>
-            <ctrl:TableData Data="{Binding Herbivore.BirtrateAvg}" Grid.Column="1" Grid.Row="2"/>
-            <ctrl:TableData Data="{Binding Herbivore.DeathrateAvg}" Grid.Column="1" Grid.Row="3"/>
-            <ctrl:TableData Data="{Binding Herbivore.MutationrateAvg}" Grid.Column="1" Grid.Row="4"/>
+            <ctrl:TableData Data="{Binding Herbivore.PopulationCurrent}" Grid.Column="1" Grid.Row="1"/>
+            <ctrl:TableData Data="{Binding Herbivore.BirthRateAvg}" Grid.Column="1" Grid.Row="2"/>
+            <ctrl:TableData Data="{Binding Herbivore.DeathRateAvg}" Grid.Column="1" Grid.Row="3"/>
+            <ctrl:TableData Data="{Binding Herbivore.MutationRateAvg}" Grid.Column="1" Grid.Row="4"/>
             <ctrl:TableData Data="{Binding Herbivore.SpeedAvg}" Grid.Column="1" Grid.Row="5"/>
             <ctrl:TableData Data="{Binding Herbivore.SizeAvg}" Grid.Column="1" Grid.Row="6"/>
 
-            <ctrl:TableData Data="{Binding Omnivore.Population}" Grid.Column="2" Grid.Row="1"/>
-            <ctrl:TableData Data="{Binding Omnivore.BirtrateAvg}" Grid.Column="2" Grid.Row="2"/>
-            <ctrl:TableData Data="{Binding Omnivore.DeathrateAvg}" Grid.Column="2" Grid.Row="3"/>
-            <ctrl:TableData Data="{Binding Omnivore.MutationrateAvg}" Grid.Column="2" Grid.Row="4"/>
+            <ctrl:TableData Data="{Binding Omnivore.PopulationCurrent}" Grid.Column="2" Grid.Row="1"/>
+            <ctrl:TableData Data="{Binding Omnivore.BirthRateAvg}" Grid.Column="2" Grid.Row="2"/>
+            <ctrl:TableData Data="{Binding Omnivore.DeathRateAvg}" Grid.Column="2" Grid.Row="3"/>
+            <ctrl:TableData Data="{Binding Omnivore.MutationRateAvg}" Grid.Column="2" Grid.Row="4"/>
             <ctrl:TableData Data="{Binding Omnivore.SpeedAvg}" Grid.Column="2" Grid.Row="5"/>
             <ctrl:TableData Data="{Binding Omnivore.SizeAvg}" Grid.Column="2" Grid.Row="6"/>
 
-            <ctrl:TableData Data="{Binding Carnivore.Population}" Grid.Column="3" Grid.Row="1"/>
-            <ctrl:TableData Data="{Binding Carnivore.BirtrateAvg}" Grid.Column="3" Grid.Row="2"/>
-            <ctrl:TableData Data="{Binding Carnivore.DeathrateAvg}" Grid.Column="3" Grid.Row="3"/>
-            <ctrl:TableData Data="{Binding Carnivore.MutationrateAvg}" Grid.Column="3" Grid.Row="4"/>
+            <ctrl:TableData Data="{Binding Carnivore.PopulationCurrent}" Grid.Column="3" Grid.Row="1"/>
+            <ctrl:TableData Data="{Binding Carnivore.BirthRateAvg}" Grid.Column="3" Grid.Row="2"/>
+            <ctrl:TableData Data="{Binding Carnivore.DeathRateAvg}" Grid.Column="3" Grid.Row="3"/>
+            <ctrl:TableData Data="{Binding Carnivore.MutationRateAvg}" Grid.Column="3" Grid.Row="4"/>
             <ctrl:TableData Data="{Binding Carnivore.SpeedAvg}" Grid.Column="3" Grid.Row="5"/>
             <ctrl:TableData Data="{Binding Carnivore.SizeAvg}" Grid.Column="3" Grid.Row="6"/>
         </Grid>
