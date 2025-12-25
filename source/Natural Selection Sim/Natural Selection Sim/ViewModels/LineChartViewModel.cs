@@ -33,6 +33,8 @@ namespace Natural_Selection_Sim.ViewModels
 				SeparatorsPaint = new SolidColorPaint(SKColors.Red),
 				TicksPaint = new SolidColorPaint(SKColors.Red),
 				TextSize = 14
+				, ShowSeparatorLines = false
+				
 			}
 		};
         public Axis[] YAxes { get; set; } = new[]
@@ -43,7 +45,8 @@ namespace Natural_Selection_Sim.ViewModels
 				LabelsPaint = new SolidColorPaint(SKColors.Blue),
 				SeparatorsPaint = new SolidColorPaint(SKColors.Blue),
 				TicksPaint = new SolidColorPaint(SKColors.Blue),
-                TextSize = 14
+                TextSize = 14,
+				ShowSeparatorLines = false
 
             }
 		};
