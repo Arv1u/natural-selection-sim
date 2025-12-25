@@ -1,0 +1,20 @@
+﻿Natural Selection Sim
+
+
+winexe
+C#
+.cs
+C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Release\net9.0-windows\
+Natural_Selection_Sim
+none
+false
+TRACE;RELEASE;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\App.xaml
+6-1245271367
+12002568111
+141477105630
+2101180353424
+MainWindow.xaml;UserControls\StartingValuesControl.xaml;UserControls\TableData.xaml;UserControls\TableHeader.xaml;UserControls\TableNumInput.xaml;Views\LineChart.xaml;
+
+False
+

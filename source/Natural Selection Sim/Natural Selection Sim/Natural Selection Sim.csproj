@@ -7,7 +7,34 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<UseWPF>true</UseWPF>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<ApplicationIcon>favicon (2).ico</ApplicationIcon>
+		<PublishTrimmed>false</PublishTrimmed>
 	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="app.manifest" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Remove="Styles\DataBorder.xaml" />
+	  <Page Remove="Styles\PauseButtonStyles.xaml" />
+	  <Page Remove="Styles\ResetButtonStyles.xaml" />
+	  <Page Remove="Styles\SliderStyle.xaml" />
+	  <Page Remove="Styles\StartButtonStyles.xaml" />
+	  <Page Remove="Styles\TableData.xaml" />
+	  <Page Remove="Styles\TableHeaders.xaml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Resource Include="app.manifest" />
+	  <Resource Include="Styles\DataBorder.xaml" />
+	  <Resource Include="Styles\PauseButtonStyles.xaml" />
+	  <Resource Include="Styles\ResetButtonStyles.xaml" />
+	  <Resource Include="Styles\SliderStyle.xaml" />
+	  <Resource Include="Styles\StartButtonStyles.xaml" />
+	  <Resource Include="Styles\TableData.xaml" />
+	  <Resource Include="Styles\TableHeaders.xaml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="favicon (2).ico" />
+	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Models\" />
 	</ItemGroup>

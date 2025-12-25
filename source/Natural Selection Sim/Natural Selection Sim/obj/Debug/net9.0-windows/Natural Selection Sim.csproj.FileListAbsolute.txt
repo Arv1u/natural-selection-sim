@@ -1,10 +1,4 @@
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Natural Selection Sim.csproj.AssemblyReference.cache
-C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Styles\PauseButtonStyles.baml
-C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Styles\ResetButtonStyles.baml
-C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Styles\SliderStyle.baml
-C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Styles\StartButtonStyles.baml
-C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Styles\TableData.baml
-C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Styles\TableHeaders.baml
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\App.g.cs
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Natural Selection Sim_MarkupCompile.cache
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Natural Selection Sim_MarkupCompile.lref
@@ -50,7 +44,6 @@ C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection S
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Views\LineChart.baml
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\StartingValuesControl.g.cs
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\StartingValuesControl.baml
-C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Styles\DataBorder.baml
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableData.g.cs
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableHeader.g.cs
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableData.baml
@@ -58,3 +51,4 @@ C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection S
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableNumInput.g.cs
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableNumInput.baml
+C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Natural Selection Sim_Content.g.cs

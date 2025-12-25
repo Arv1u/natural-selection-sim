@@ -1,6 +1,8 @@
 ﻿using LiveChartsCore;
 using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.Painting;
 using Natural_Selection_Sim.MVVM;
+using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -21,7 +23,31 @@ namespace Natural_Selection_Sim.ViewModels
 		{
 
 		}
-		public void AddData(ChartData data)
+		public Axis[] XAxes { get; set; } = new[]
+		{
+			new Axis
+			{
+				Name = "X Axis",
+				LabelsPaint = new SolidColorPaint(SKColors.Black),
+				SeparatorsPaint = new SolidColorPaint(SKColors.Gray),
+				TicksPaint = new SolidColorPaint(SKColors.Gray),
+				TextSize = 14
+			}
+		};
+        public Axis[] YAxes { get; set; } = new[]
+		{
+			new Axis
+			{
+				Name = "Y Axis",
+				LabelsPaint = new SolidColorPaint(SKColors.Blue),
+				SeparatorsPaint = new SolidColorPaint(SKColors.Blue),
+				TicksPaint = new SolidColorPaint(SKColors.Blue),
+                TextSize = 14
+
+            }
+		};
+
+        public void AddData(ChartData data)
 		{
 			Series?.Add(data.Series);
 			

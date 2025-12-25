@@ -210,9 +210,8 @@
             <ctrl:StartingValuesControl Margin="10 0 0 0" PopulationName="Carnivore" Grid.Column="2"/>
         </Grid>
             <!--LineGraph-->
-        <lvc:CartesianChart Name="chart"
-                            Series="{Binding Series}" 
-                            EasingFunction="{x:Null}"
+        <lvc:CartesianChart XAxes="{Binding XAxes}"
+                            YAxes="{Binding YAxes}"
                             Grid.Column="1"
                             Grid.Row="1"
                             DataContext="{Binding LineChartViewModel}"

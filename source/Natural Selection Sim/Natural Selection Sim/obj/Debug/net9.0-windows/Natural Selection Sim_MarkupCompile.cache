@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\App.xaml
-131832849388
-
+6-1245271367
+12002568111
 14-1125508536
 2101180353424
-MainWindow.xaml;Styles\DataBorder.xaml;Styles\PauseButtonStyles.xaml;Styles\ResetButtonStyles.xaml;Styles\SliderStyle.xaml;Styles\StartButtonStyles.xaml;Styles\TableData.xaml;Styles\TableHeaders.xaml;UserControls\StartingValuesControl.xaml;UserControls\TableData.xaml;UserControls\TableHeader.xaml;UserControls\TableNumInput.xaml;Views\LineChart.xaml;
+MainWindow.xaml;UserControls\StartingValuesControl.xaml;UserControls\TableData.xaml;UserControls\TableHeader.xaml;UserControls\TableNumInput.xaml;Views\LineChart.xaml;
 
 False
 
