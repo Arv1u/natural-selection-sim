@@ -7,6 +7,51 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <CheckBox IsChecked="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" Grid.Column="0" VerticalAlignment="Center" Margin="0 0 0 10"/>
+        <TextBlock Text="{Binding PopulationName, RelativeSource={RelativeSource AncestorType=UserControl}}" d:Text="TestHeader" Grid.Column="1"
+                   FontWeight="Bold"
+                   Foreground="White"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="20"
+                   Margin="0 0 0 10"/>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <local:TableHeader HeaderName=" " x:Name="TopLeftBordersHeader"/>
+            <local:TableHeader HeaderName="Startingvalue" Grid.Column="2"/>
+            <local:TableHeader HeaderName="Population" Grid.Row="1"/>
+            <local:TableHeader HeaderName="Birthrate" Grid.Row="2"/>
+            <local:TableHeader HeaderName="Deathrate" Grid.Row="3"/>
+            <local:TableHeader HeaderName="Mutationrate" Grid.Row="4"/>
+            <local:TableHeader HeaderName="Speed" Grid.Row="5"/>
+            <local:TableHeader HeaderName="Size" Grid.Row="6"/>
+
+            <local:TableNumInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" Grid.Column="1" Grid.Row="1"/>
+            <local:TableNumInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" Grid.Column="1" Grid.Row="2"/>
+            <local:TableNumInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" Grid.Column="1" Grid.Row="3"/>
+            <local:TableNumInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" Grid.Column="1" Grid.Row="4"/>
+            <local:TableNumInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" Grid.Column="1" Grid.Row="5"/>
+            <local:TableNumInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" Grid.Column="1" Grid.Row="6"/>
+        </Grid>
     </Grid>
 </UserControl>

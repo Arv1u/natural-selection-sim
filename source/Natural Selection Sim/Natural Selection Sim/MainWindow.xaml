@@ -28,7 +28,8 @@
         </Grid.RowDefinitions>
             
         <!--Header and controls grid-->
-        <Grid Grid.Column="0"
+        <Grid Margin="10 0 20 0"
+            Grid.Column="0"
                 Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -143,8 +144,8 @@
         </Grid>
             
         <!--Results Simulation table-->
-        <Grid Grid.Row="1" >
-            <Grid Margin="30">
+        <Grid Grid.Row="1" Margin="20 20 20 20">
+            
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -195,9 +196,18 @@
                 <ctrl:TableData Data="{Binding CarnivoreMutationrateAvg}" Grid.Column="3" Grid.Row="4"/>
                 <ctrl:TableData Data="{Binding CarnivoreSpeedAvg}" Grid.Column="3" Grid.Row="5"/>
                 <ctrl:TableData Data="{Binding CarnivoreSizeAvg}" Grid.Column="3" Grid.Row="6"/>
-                
-
             </Grid>
+        
+        <Grid Grid.Column="1"
+              Margin="20 60 20 20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ctrl:StartingValuesControl Margin="0 0 10 0" PopulationName="Herbivore" Grid.Column="0"/>
+            <ctrl:StartingValuesControl Margin="10 0 10 0" PopulationName="Omnivore" Grid.Column="1"/>
+            <ctrl:StartingValuesControl Margin="10 0 0 0" PopulationName="Carnivore" Grid.Column="2"/>
         </Grid>
             <!--LineGraph-->
         <lvc:CartesianChart Name="chart"
@@ -212,6 +222,7 @@
                             VerticalAlignment="Stretch"
                             HorizontalAlignment="Stretch"
                             IsEnabled="True"
+                            Margin="20 20 20 20"
                             >
         </lvc:CartesianChart>
     </Grid>

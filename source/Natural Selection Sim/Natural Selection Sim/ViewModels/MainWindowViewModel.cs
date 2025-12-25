@@ -49,7 +49,7 @@ namespace Natural_Selection_Sim.ViewModels
         }
 
 		private int data;
-		public int Data
+		public int HerbivorePopulation
 		{
 			get { return data; }
 			set { data = value;
@@ -61,7 +61,7 @@ namespace Natural_Selection_Sim.ViewModels
 			LineChartViewModel.Reset();
             LineChartViewModel.AddData(new ChartData("Series1"));
             LineChartViewModel.AddData(new ChartData("Series2"));
-			Data = 0;
+            HerbivorePopulation = 0;
 			data2 = 0;
 			CurrentTimeStep = 0;
         }
@@ -69,9 +69,9 @@ namespace Natural_Selection_Sim.ViewModels
         private void OnTimerTick(Object? source, ElapsedEventArgs e)
 		{
 			Random rnd = new();
-			Data += rnd.Next(-10, 11);
+            HerbivorePopulation += rnd.Next(-10, 11);
 			data2 += rnd.Next(-10, 11);
-            LineChartViewModel.ChartData[0].AddValue(Data);
+            LineChartViewModel.ChartData[0].AddValue(HerbivorePopulation);
             LineChartViewModel.ChartData[1].AddValue(data2);
 			CurrentTimeStep++;
         }

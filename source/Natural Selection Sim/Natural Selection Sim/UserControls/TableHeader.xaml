@@ -12,7 +12,7 @@
     <Grid>
         <Border BorderThickness="1"
                 BorderBrush="White">
-            <TextBlock Text="{Binding HeaderName}"
+            <TextBlock Text="{Binding HeaderName, RelativeSource={RelativeSource AncestorType=UserControl}}"
                        TextAlignment="Center"
                        Foreground="White"
                        FontWeight="Bold"

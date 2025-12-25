@@ -23,6 +23,31 @@ namespace Natural_Selection_Sim.UserControls
         public StartingValuesControl()
         {
             InitializeComponent();
+            StartingValuesIsEnabled = true;
         }
+        public static DependencyProperty PopulationEnabledProperty = DependencyProperty.Register("PopulationEnabled", typeof(bool), typeof(StartingValuesControl));
+        public bool PopulationEnabled 
+        { 
+            get => (bool)GetValue(PopulationEnabledProperty);
+            set => SetValue(PopulationEnabledProperty, value); 
+        }
+        public static DependencyProperty PopulationNameProperty = DependencyProperty.Register("PopulationName", typeof(string), typeof(StartingValuesControl));
+        public string PopulationName
+        {
+            get => (string)GetValue(PopulationNameProperty);
+            set => SetValue(PopulationNameProperty, value);
+        }
+
+
+        public bool StartingValuesIsEnabled 
+        {
+            get { return (bool)GetValue(StartingValuesIsEnabledProperty); }
+            set { SetValue(StartingValuesIsEnabledProperty, value); }
+        }
+
+        public static readonly DependencyProperty StartingValuesIsEnabledProperty =
+            DependencyProperty.Register("StartingValuesIsEnabled", typeof(bool), typeof(StartingValuesControl));
+
+
     }
 }

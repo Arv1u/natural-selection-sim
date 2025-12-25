@@ -23,7 +23,6 @@ namespace Natural_Selection_Sim.UserControls
         public TableData()
         {
             InitializeComponent();
-            DataContext = this;
         }
         public static DependencyProperty DataProperty = DependencyProperty.Register("Data", typeof(string), typeof(TableData));
         public string Data 

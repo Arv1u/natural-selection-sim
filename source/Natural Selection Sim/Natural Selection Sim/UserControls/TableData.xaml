@@ -15,7 +15,8 @@
             <TextBlock HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        TextAlignment="Center"
-                       Text="{Binding Data}"/>
+                       Foreground="White"
+                       Text="{Binding Data, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
         </Border>
     </Grid>
 </UserControl>

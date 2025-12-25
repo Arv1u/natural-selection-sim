@@ -23,7 +23,6 @@ namespace Natural_Selection_Sim.UserControls
         public TableHeader()
         {
             InitializeComponent();
-            DataContext = this;
         }
 
         public static readonly DependencyProperty HeaderNameProperty = DependencyProperty.Register("HeaderName", typeof(string), typeof(TableHeader));
