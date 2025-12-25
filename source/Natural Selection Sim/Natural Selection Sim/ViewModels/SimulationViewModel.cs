@@ -1,6 +1,6 @@
 ﻿using Natural_Selection_Sim.MVVM;
 using SkiaSharp;
-using System.Timers;
+
 namespace Natural_Selection_Sim.ViewModels
 {
     public class SimulationViewModel : PropertyChangedBase
@@ -9,6 +9,7 @@ namespace Natural_Selection_Sim.ViewModels
 		public SpeciesData Herbivore { get; } = new("Herbivore",SKColors.Green, LineChartViewModel);
 		public SpeciesData Omnivore { get; } = new("Omnivore", SKColors.Orange, LineChartViewModel);
 		public SpeciesData Carnivore { get; } = new("Carnivore", SKColors.Red, LineChartViewModel);
+
 		private int timeStepsPerSecond;
 
 		public int TimeStepsPerSecond
@@ -56,7 +57,6 @@ namespace Natural_Selection_Sim.ViewModels
 			}
 			if (Omnivore.IsEnabled)
 			{
-
 				Omnivore.Start();
 			}
 			if (Carnivore.IsEnabled)

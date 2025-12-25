@@ -8,10 +8,15 @@ namespace Natural_Selection_Sim.ViewModels
     public class SpeciesData : PropertyChangedBase
     {
         private LineChartViewModel LineChartVM { get; set; }
+
         private readonly ObservableCollection<int> populationTrend = new() { };
+
         public LineSeries<int>? Series { get; set; }
+
         private SKColor Color { get;}
+
         #region Properties
+
         private bool isEnabled;
         public bool IsEnabled
         {
@@ -25,6 +30,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged(nameof(IsEnabled));
             }
         }
+
         private string name;
         public string Name
         {
@@ -35,6 +41,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged();
             }
         }
+
         private int populationStart;
         public int PopulationStart
         {
@@ -48,6 +55,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged();
             }
         }
+
         private int populationCurrent;
         public int PopulationCurrent
         {
@@ -59,6 +67,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged();
             }
         }
+
         private double birthRateStart;
         public double BirthRateStart
         {
@@ -72,6 +81,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged();
             }
         }
+
         private double birthRateAvg;
         public double BirthRateAvg
         {
@@ -85,6 +95,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged();
             }
         }
+
         private double deathRateStart;
         public double DeathRateStart
         {
@@ -98,6 +109,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged(nameof(DeathRateStart));
             }
         }
+
         private double deathRateAvg;
         public double DeathRateAvg
         {
@@ -125,6 +137,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged();
             }
         }
+
         private double mutationRateAvg;
         public double MutationRateAvg
         {
@@ -135,6 +148,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged();
             }
         }
+
         private int speedStart;
         public int SpeedStart
         {
@@ -148,6 +162,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged(nameof(SpeedStart));
             }
         }
+
         private int speedAvg;
         public int SpeedAvg
         {
@@ -161,6 +176,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged(nameof(SpeedAvg));
             }
         }
+
         private int sizeStart;
         public int SizeStart
         {
@@ -174,6 +190,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged(nameof(SizeStart));
             }
         }
+
         private int sizeAvg;
         public int SizeAvg
         {
@@ -187,6 +204,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged(nameof(SizeAvg));
             }
         }
+
         #endregion
         public SpeciesData(string name,SKColor color, LineChartViewModel lineChartVM)
         {
