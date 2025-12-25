@@ -40,8 +40,6 @@ C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection S
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Natural Selection Sim.pdb
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Natural Selection Sim.genruntimeconfig.cache
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\ref\Natural Selection Sim.dll
-C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Views\LineChart.g.cs
-C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\Views\LineChart.baml
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\StartingValuesControl.g.cs
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\StartingValuesControl.baml
 C:\Users\jakob\Documents\GitHub\natural-selection-sim\source\Natural Selection Sim\Natural Selection Sim\obj\Debug\net9.0-windows\UserControls\TableData.g.cs

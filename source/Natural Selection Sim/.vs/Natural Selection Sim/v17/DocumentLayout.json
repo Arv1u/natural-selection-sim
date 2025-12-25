@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|solutionrelative:natural selection sim\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\usercontrols\\tableintinput.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|solutionrelative:natural selection sim\\usercontrols\\tableintinput.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|solutionrelative:natural selection sim\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\obj\\Debug\\net9.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Natural Selection Sim\\obj\\Debug\\net9.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\viewmodels\\simulationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|solutionrelative:natural selection sim\\viewmodels\\simulationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\viewmodels\\linechartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|solutionrelative:natural selection sim\\viewmodels\\linechartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|solutionrelative:natural selection sim\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\usercontrols\\tableintinput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -33,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\usercontrols\\startingvaluescontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|solutionrelative:natural selection sim\\usercontrols\\startingvaluescontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\usercontrols\\tableintinput.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|solutionrelative:natural selection sim\\usercontrols\\tableintinput.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +78,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\App.xaml",
+              "RelativeDocumentMoniker": "Natural Selection Sim\\App.xaml",
+              "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\App.xaml",
+              "RelativeToolTip": "Natural Selection Sim\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-25T15:47:46.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.g.cs",
+              "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\obj\\Debug\\net9.0-windows\\App.g.cs",
+              "RelativeDocumentMoniker": "Natural Selection Sim\\obj\\Debug\\net9.0-windows\\App.g.cs",
+              "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\obj\\Debug\\net9.0-windows\\App.g.cs",
+              "RelativeToolTip": "Natural Selection Sim\\obj\\Debug\\net9.0-windows\\App.g.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T15:46:29.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Natural Selection Sim\\MainWindow.xaml.cs",
@@ -78,12 +111,11 @@
               "RelativeToolTip": "Natural Selection Sim\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T14:18:37.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T14:18:37.358Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Natural Selection Sim\\MainWindow.xaml",
@@ -95,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "TableIntInput.xaml",
               "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\UserControls\\TableIntInput.xaml",
               "RelativeDocumentMoniker": "Natural Selection Sim\\UserControls\\TableIntInput.xaml",
@@ -107,19 +139,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "StartingValuesControl.xaml",
               "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\UserControls\\StartingValuesControl.xaml",
               "RelativeDocumentMoniker": "Natural Selection Sim\\UserControls\\StartingValuesControl.xaml",
               "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\UserControls\\StartingValuesControl.xaml",
               "RelativeToolTip": "Natural Selection Sim\\UserControls\\StartingValuesControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-25T13:48:12.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T13:48:12.87Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "SpeciesData.cs",
               "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\ViewModels\\SpeciesData.cs",
               "RelativeDocumentMoniker": "Natural Selection Sim\\ViewModels\\SpeciesData.cs",
@@ -127,25 +158,24 @@
               "RelativeToolTip": "Natural Selection Sim\\ViewModels\\SpeciesData.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T13:15:43.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T13:15:43.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "SimulationViewModel.cs",
               "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\ViewModels\\SimulationViewModel.cs",
               "RelativeDocumentMoniker": "Natural Selection Sim\\ViewModels\\SimulationViewModel.cs",
               "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\ViewModels\\SimulationViewModel.cs",
               "RelativeToolTip": "Natural Selection Sim\\ViewModels\\SimulationViewModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAC4AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-25T02:26:13.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "LineChartViewModel.cs",
               "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\ViewModels\\LineChartViewModel.cs",
               "RelativeDocumentMoniker": "Natural Selection Sim\\ViewModels\\LineChartViewModel.cs",
@@ -153,8 +183,7 @@
               "RelativeToolTip": "Natural Selection Sim\\ViewModels\\LineChartViewModel.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAAAD8AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T13:23:46.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T13:23:46.3Z"
             }
           ]
         },
@@ -165,40 +194,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "0368de54-f620-41ae-a794-ddaba05aff6a",
-        "Display": 1,
-        "X": 0,
-        "Y": 65,
-        "Width": 800,
-        "Height": 600,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TableIntInput.xaml",
-              "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\UserControls\\TableIntInput.xaml",
-              "RelativeDocumentMoniker": "Natural Selection Sim\\UserControls\\TableIntInput.xaml",
-              "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\UserControls\\TableIntInput.xaml",
-              "RelativeToolTip": "Natural Selection Sim\\UserControls\\TableIntInput.xaml",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAywFgAAABqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-25T10:43:30.073Z",
-              "EditorCaption": ""
             }
           ]
         }
@@ -223,15 +218,49 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Natural Selection Sim\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\MainWindow.xaml",
               "RelativeToolTip": "Natural Selection Sim\\MainWindow.xaml",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAAAMMAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-25T02:41:30.058Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "0368de54-f620-41ae-a794-ddaba05aff6a",
+        "Display": 1,
+        "X": 0,
+        "Y": 65,
+        "Width": 800,
+        "Height": 600,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TableIntInput.xaml",
+              "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\UserControls\\TableIntInput.xaml",
+              "RelativeDocumentMoniker": "Natural Selection Sim\\UserControls\\TableIntInput.xaml",
+              "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\UserControls\\TableIntInput.xaml",
+              "RelativeToolTip": "Natural Selection Sim\\UserControls\\TableIntInput.xaml",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAywFgAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-25T10:43:30.073Z",
               "EditorCaption": ""
             }
           ]
