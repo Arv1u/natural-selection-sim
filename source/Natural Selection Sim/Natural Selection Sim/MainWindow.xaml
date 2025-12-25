@@ -26,7 +26,7 @@
             <RowDefinition Height="40*"/>
             <RowDefinition Height="60*"/>
         </Grid.RowDefinitions>
-            
+
         <!--Header and controls grid-->
         <Grid Margin="10 0 20 0"
             Grid.Column="0"
@@ -142,62 +142,62 @@
                     VerticalAlignment="Center"/>
             </Grid>
         </Grid>
-            
+
         <!--Results Simulation table-->
         <Grid Grid.Row="1" Margin="20 20 20 20">
-            
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <!--Row/Column Headers-->
-                <ctrl:TableHeader x:Name="TopLeftBorders"/>
 
-                <ctrl:TableHeader HeaderName="Herbivore" Grid.Column="1"/>
-                <ctrl:TableHeader HeaderName="Omnivore" Grid.Column="2"/>
-                <ctrl:TableHeader HeaderName="Carnivore" Grid.Column="3"/>
-                <ctrl:TableHeader HeaderName="Population" Grid.Row="1"/>
-                <ctrl:TableHeader HeaderName="Birthrate Ø" Grid.Row="2"/>
-                <ctrl:TableHeader HeaderName="Deathrate Ø" Grid.Row="3"/>
-                <ctrl:TableHeader HeaderName="Mutationrate Ø" Grid.Row="4"/>
-                <ctrl:TableHeader HeaderName="Speed Ø" Grid.Row="5"/>
-                <ctrl:TableHeader HeaderName="Size Ø" Grid.Row="6"/>
-                <!--Simulation Data-->
-                
-                
-                <ctrl:TableData Data="{Binding HerbivorePopulation}" Grid.Column="1" Grid.Row="1"/>
-                <ctrl:TableData Data="{Binding HerbivoreBirtrateAvg}" Grid.Column="1" Grid.Row="2"/>
-                <ctrl:TableData Data="{Binding HerbivoreDeathrateAvg}" Grid.Column="1" Grid.Row="3"/>
-                <ctrl:TableData Data="{Binding HerbivoreMutationrateAvg}" Grid.Column="1" Grid.Row="4"/>
-                <ctrl:TableData Data="{Binding HerbivoreSpeedAvg}" Grid.Column="1" Grid.Row="5"/>
-                <ctrl:TableData Data="{Binding HerbivoreSizeAvg}" Grid.Column="1" Grid.Row="6"/>
-                
-                <ctrl:TableData Data="{Binding OmnivorePopulation}" Grid.Column="2" Grid.Row="1"/>
-                <ctrl:TableData Data="{Binding OmnivoreBirtrateAvg}" Grid.Column="2" Grid.Row="2"/>
-                <ctrl:TableData Data="{Binding OmnivoreDeathrateAvg}" Grid.Column="2" Grid.Row="3"/>
-                <ctrl:TableData Data="{Binding OmnivoreMutationrateAvg}" Grid.Column="2" Grid.Row="4"/>
-                <ctrl:TableData Data="{Binding OmnivoreSpeedAvg}" Grid.Column="2" Grid.Row="5"/>
-                <ctrl:TableData Data="{Binding OmnivoreSizeAvg}" Grid.Column="2" Grid.Row="6"/>
-                
-                <ctrl:TableData Data="{Binding CarnivorePopulation}" Grid.Column="3" Grid.Row="1"/>
-                <ctrl:TableData Data="{Binding CarnivoreBirtrateAvg}" Grid.Column="3" Grid.Row="2"/>
-                <ctrl:TableData Data="{Binding CarnivoreDeathrateAvg}" Grid.Column="3" Grid.Row="3"/>
-                <ctrl:TableData Data="{Binding CarnivoreMutationrateAvg}" Grid.Column="3" Grid.Row="4"/>
-                <ctrl:TableData Data="{Binding CarnivoreSpeedAvg}" Grid.Column="3" Grid.Row="5"/>
-                <ctrl:TableData Data="{Binding CarnivoreSizeAvg}" Grid.Column="3" Grid.Row="6"/>
-            </Grid>
-        
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--Row/Column Headers-->
+            <ctrl:TableHeader x:Name="TopLeftBorders"/>
+
+            <ctrl:TableHeader HeaderName="Herbivore" Grid.Column="1"/>
+            <ctrl:TableHeader HeaderName="Omnivore" Grid.Column="2"/>
+            <ctrl:TableHeader HeaderName="Carnivore" Grid.Column="3"/>
+            <ctrl:TableHeader HeaderName="Population" Grid.Row="1"/>
+            <ctrl:TableHeader HeaderName="Birthrate Ø" Grid.Row="2"/>
+            <ctrl:TableHeader HeaderName="Deathrate Ø" Grid.Row="3"/>
+            <ctrl:TableHeader HeaderName="Mutationrate Ø" Grid.Row="4"/>
+            <ctrl:TableHeader HeaderName="Speed Ø" Grid.Row="5"/>
+            <ctrl:TableHeader HeaderName="Size Ø" Grid.Row="6"/>
+            <!--Simulation Data-->
+
+
+            <ctrl:TableData Data="{Binding HerbivorePopulation}" Grid.Column="1" Grid.Row="1"/>
+            <ctrl:TableData Data="{Binding HerbivoreBirtrateAvg}" Grid.Column="1" Grid.Row="2"/>
+            <ctrl:TableData Data="{Binding HerbivoreDeathrateAvg}" Grid.Column="1" Grid.Row="3"/>
+            <ctrl:TableData Data="{Binding HerbivoreMutationrateAvg}" Grid.Column="1" Grid.Row="4"/>
+            <ctrl:TableData Data="{Binding HerbivoreSpeedAvg}" Grid.Column="1" Grid.Row="5"/>
+            <ctrl:TableData Data="{Binding HerbivoreSizeAvg}" Grid.Column="1" Grid.Row="6"/>
+
+            <ctrl:TableData Data="{Binding OmnivorePopulation}" Grid.Column="2" Grid.Row="1"/>
+            <ctrl:TableData Data="{Binding OmnivoreBirtrateAvg}" Grid.Column="2" Grid.Row="2"/>
+            <ctrl:TableData Data="{Binding OmnivoreDeathrateAvg}" Grid.Column="2" Grid.Row="3"/>
+            <ctrl:TableData Data="{Binding OmnivoreMutationrateAvg}" Grid.Column="2" Grid.Row="4"/>
+            <ctrl:TableData Data="{Binding OmnivoreSpeedAvg}" Grid.Column="2" Grid.Row="5"/>
+            <ctrl:TableData Data="{Binding OmnivoreSizeAvg}" Grid.Column="2" Grid.Row="6"/>
+
+            <ctrl:TableData Data="{Binding CarnivorePopulation}" Grid.Column="3" Grid.Row="1"/>
+            <ctrl:TableData Data="{Binding CarnivoreBirtrateAvg}" Grid.Column="3" Grid.Row="2"/>
+            <ctrl:TableData Data="{Binding CarnivoreDeathrateAvg}" Grid.Column="3" Grid.Row="3"/>
+            <ctrl:TableData Data="{Binding CarnivoreMutationrateAvg}" Grid.Column="3" Grid.Row="4"/>
+            <ctrl:TableData Data="{Binding CarnivoreSpeedAvg}" Grid.Column="3" Grid.Row="5"/>
+            <ctrl:TableData Data="{Binding CarnivoreSizeAvg}" Grid.Column="3" Grid.Row="6"/>
+        </Grid>
+
         <Grid Grid.Column="1"
               Margin="20 60 20 20">
             <Grid.ColumnDefinitions>
@@ -209,12 +209,14 @@
             <ctrl:StartingValuesControl Margin="10 0 10 0" PopulationName="Omnivore" Grid.Column="1"/>
             <ctrl:StartingValuesControl Margin="10 0 0 0" PopulationName="Carnivore" Grid.Column="2"/>
         </Grid>
-            <!--LineGraph-->
-        <lvc:CartesianChart XAxes="{Binding XAxes}"
+        <!--LineGraph-->
+        <lvc:CartesianChart DataContext="{Binding LineChartViewModel}"
+                            XAxes="{Binding XAxes}"
                             YAxes="{Binding YAxes}"
+                            Series="{Binding Series}"
+                            EasingFunction="{x:Null}"
                             Grid.Column="1"
                             Grid.Row="1"
-                            DataContext="{Binding LineChartViewModel}"
                             SnapsToDevicePixels="True"
                             UseLayoutRounding="True"
                             RenderOptions.BitmapScalingMode="NearestNeighbor"
@@ -222,8 +224,6 @@
                             HorizontalAlignment="Stretch"
                             IsEnabled="True"
                             Margin="20 20 20 20"
-                            >
-        </lvc:CartesianChart>
+                            />
     </Grid>
-    
 </Window>

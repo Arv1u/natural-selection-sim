@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\viewmodels\\linechartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|solutionrelative:natural selection sim\\viewmodels\\linechartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|solutionrelative:natural selection sim\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\viewmodels\\linechartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|solutionrelative:natural selection sim\\viewmodels\\linechartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51CEABF5-EBA9-441A-B0E4-E2325A02E64F}|Natural Selection Sim\\Natural Selection Sim.csproj|c:\\users\\jakob\\documents\\github\\natural-selection-sim\\source\\natural selection sim\\natural selection sim\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -46,25 +46,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LineChartViewModel.cs",
               "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\ViewModels\\LineChartViewModel.cs",
               "RelativeDocumentMoniker": "Natural Selection Sim\\ViewModels\\LineChartViewModel.cs",
               "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\ViewModels\\LineChartViewModel.cs",
               "RelativeToolTip": "Natural Selection Sim\\ViewModels\\LineChartViewModel.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAD4vzYAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-25T01:13:58.051Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Natural Selection Sim\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\MainWindow.xaml",
-              "RelativeToolTip": "Natural Selection Sim\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\MainWindow.xaml*",
+              "RelativeToolTip": "Natural Selection Sim\\MainWindow.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-25T01:13:49.243Z",
               "EditorCaption": ""
@@ -106,9 +106,9 @@
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Natural Selection Sim\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\MainWindow.xaml",
-              "RelativeToolTip": "Natural Selection Sim\\MainWindow.xaml",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\jakob\\Documents\\GitHub\\natural-selection-sim\\source\\Natural Selection Sim\\Natural Selection Sim\\MainWindow.xaml*",
+              "RelativeToolTip": "Natural Selection Sim\\MainWindow.xaml*",
+              "ViewState": "AgIAALwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-25T01:13:50.895Z",
               "EditorCaption": ""

@@ -1,0 +1,23 @@
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\Natural Selection Sim.exe
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\Natural Selection Sim.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\Natural Selection Sim.deps.json
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\Natural Selection Sim.runtimeconfig.json
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\Natural Selection Sim.pdb
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\HarfBuzzSharp.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\LiveChartsCore.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\LiveChartsCore.SkiaSharpView.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\LiveChartsCore.SkiaSharpView.WPF.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\OpenTK.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\GLWpfControl.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\SkiaSharp.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\SkiaSharp.HarfBuzz.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\SkiaSharp.Views.Desktop.Common.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\SkiaSharp.Views.WPF.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\runtimes\osx\native\libHarfBuzzSharp.dylib
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\runtimes\win-x64\native\libHarfBuzzSharp.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\runtimes\win-x86\native\libHarfBuzzSharp.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\jakob\Desktop\Publish\Natural SelectionSim\runtimes\win-x86\native\libSkiaSharp.dll
