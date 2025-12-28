@@ -13,7 +13,7 @@ namespace Natural_Selection_Sim.ViewModels
 
         public LineSeries<int>? Series { get; set; }
 
-        private SKColor Color { get;}
+        private readonly SKColor color;
 
         #region Properties
 
@@ -210,7 +210,7 @@ namespace Natural_Selection_Sim.ViewModels
         {
             LineChartVM = lineChartVM;
             Name = name;
-            Color = color;
+            this.color = color;
             IsEnabled = true;
             SetDefaultStartData();
         }
@@ -223,7 +223,9 @@ namespace Natural_Selection_Sim.ViewModels
             SpeedStart = 5;
             SizeStart = 5;
         }
-
+        /// <summary>
+        /// Adds a line graph of this species' population trend to the cartesian chart.
+        /// </summary>
         public void Start()
         {
             Series = new()
@@ -234,7 +236,7 @@ namespace Natural_Selection_Sim.ViewModels
                 GeometrySize = 0,
                 LineSmoothness = 0,
                 IsVisibleAtLegend = true,
-                Stroke = new SolidColorPaint(Color)
+                Stroke = new SolidColorPaint(color)
             };
             LineChartVM.AddSeries(Series);    
         }

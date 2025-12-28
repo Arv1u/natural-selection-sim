@@ -10,14 +10,15 @@
         Title="Natural Selection Sim" 
         Height="720" Width="1280"
         MinHeight="700" MinWidth="1100"
-        Background="#222222">
+        Background="#222222"
+        Focusable="True">
     <Window.Resources>
         
         
     </Window.Resources>
    
     <!--Parent Grid-->
-    <Grid>
+    <Grid Focusable="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
@@ -130,6 +131,7 @@
                             VerticalAlignment="Center"
                             FontSize="30"
                             Grid.Column="1"
+                        Focusable="True"
                         />
                 </Grid>
                 <Slider Style="{DynamicResource SliderStyle}" Name="StepsPerSecondSlider"
