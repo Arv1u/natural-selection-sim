@@ -15,16 +15,16 @@
             <Setter Property="Stroke" Value="Black" />
             <Style.Triggers>
                 <DataTrigger Binding="{Binding IsRunning, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="True">
-                    <!--Pause sign-->
+                    <!--  Pause sign  -->
                     <Setter Property="Data" Value=" M 0 0  l 10 0 l 0 -20 l -10 0 l 0 20 M 15 0 l 10 0 l 0 -20 l -10 0 l 0 20" />
                 </DataTrigger>
                 <DataTrigger Binding="{Binding IsRunning, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="False">
-                    <!--Play sign-->
+                    <!--  Play sign  -->
                     <Setter Property="Data" Value="M 0 0l 10 5l -10 5" />
                 </DataTrigger>
             </Style.Triggers>
         </Style>
-        <Style TargetType="Button">
+        <Style BasedOn="{StaticResource RoundButtonStyle}" TargetType="Button">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding IsRunning, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="False">
                     <Setter Property="Command" Value="{Binding PlayCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" />
@@ -37,7 +37,7 @@
     </UserControl.Resources>
     <Grid>
         <Button>
-            <Path Stretch="Uniform" Margin="10"/>
+            <Path Margin="10" Stretch="Uniform" />
         </Button>
     </Grid>
 </UserControl>

@@ -42,8 +42,12 @@ namespace Natural_Selection_Sim.ViewModels
 			}
 			set
 			{
+				if (value == isRunning)
+					return;
+
 				isRunning = value;
 				OnPropertyChanged(nameof(IsRunning));
+				RunningRaiseExecuteChanged();
 			}
 		}
 		public RelayCommand StartCommand { get; } 
@@ -54,7 +58,7 @@ namespace Natural_Selection_Sim.ViewModels
 		{
 			StartCommand = new RelayCommand(_ => StartSimulation());
 			PauseCommand = new RelayCommand(_ => PauseSimulation());
-			ResetCommand = new RelayCommand(_ => ResetSimulation());
+			ResetCommand = new RelayCommand(_ => ResetSimulation(), _ => !IsRunning);
 			IsRunning = false;
         }
 		private void Run() // call this method to simulate one time step
@@ -79,21 +83,26 @@ namespace Natural_Selection_Sim.ViewModels
 			{
 				Carnivore.Start();
 			}
+			
 			IsRunning = true ;
 		}
 		private void PauseSimulation()
 		{
             Debug.WriteLine("Pausecmd run");
             IsRunning = false;
-		}
-		private void ResetSimulation()
+        }
+        private void ResetSimulation()
 		{
             Debug.WriteLine("Resetcmd run");
-            IsRunning = false;
 			LineChartViewModel.Reset();
 			Herbivore.Reset();
 			Carnivore.Reset();
 			Omnivore.Reset();
 		}
-	}
+		private void RunningRaiseExecuteChanged()
+		{
+            ResetCommand.RaiseCanExecuteChanged();
+
+        }
+    }
 }

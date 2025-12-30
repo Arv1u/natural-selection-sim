@@ -57,26 +57,14 @@
                 IsRunning="{Binding IsRunning}"
                 PauseCommand="{Binding PauseCommand}"
                 PlayCommand="{Binding StartCommand}" />
-            <Button
-                Name="PauseButton"
-                Grid.Row="1"
-                Grid.Column="1"
-                Margin="10"
-                Command="{Binding PauseCommand}"
-                Content="Pause"
-                FontSize="30"
-                FontWeight="Bold"
-                Style="{StaticResource PauseButton}" />
-            <Button
-                Name="ResetButton"
+            <ctrl:ResetButton
                 Grid.Row="1"
                 Grid.Column="2"
                 Margin="10"
-                Command="{Binding ResetCommand}"
-                Content="Reset"
                 FontSize="30"
                 FontWeight="Bold"
-                Style="{StaticResource ResetButton}" />
+                ResetCommand="{Binding ResetCommand}"/>
+            
             <!--  display timesteps passed  -->
             <Grid Grid.Row="2" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
@@ -258,7 +246,7 @@
         <Viewbox Grid.Column="1" Margin="20,30,20,20">
 
 
-            <Grid>
+            <Grid IsEnabled="{Binding IsRunning, Converter={StaticResource BoolInverterConverter}}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="1*" />

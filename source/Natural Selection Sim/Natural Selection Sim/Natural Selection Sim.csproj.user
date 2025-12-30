@@ -7,6 +7,9 @@
     <Compile Update="UserControls\PlayPauseButton.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\ResetButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\StartingValuesControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
