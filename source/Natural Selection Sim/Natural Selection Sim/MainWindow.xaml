@@ -51,15 +51,12 @@
                 FontWeight="Bold"
                 Foreground="White"
                 Text="Natural Selection" />
-            <Button
-                Grid.Row="1"
-                Grid.Column="0"
+            <ctrl:PlayPauseButton
                 Margin="10"
-                Command="{Binding StartCommand}"
-                Content="Start"
-                FontSize="30"
-                FontWeight="Bold"
-                Style="{StaticResource StartButton}" />
+                Grid.Row="1"
+                PlayCommand="{Binding StartCommand}"
+                IsRunning="{Binding IsRunning}"
+                PauseCommand="{Binding PauseCommand}"/>
             <Button
                 Name="PauseButton"
                 Grid.Row="1"

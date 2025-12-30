@@ -1,5 +1,6 @@
 ﻿using Natural_Selection_Sim.MVVM;
 using SkiaSharp;
+using System.Diagnostics;
 
 namespace Natural_Selection_Sim.ViewModels
 {
@@ -32,6 +33,19 @@ namespace Natural_Selection_Sim.ViewModels
 				OnPropertyChanged();
 			}
 		}
+		private bool isRunning;
+		public bool IsRunning
+		{
+			get
+			{
+				return isRunning;
+			}
+			set
+			{
+				isRunning = value;
+				OnPropertyChanged(nameof(IsRunning));
+			}
+		}
 		public RelayCommand StartCommand { get; } 
 		public RelayCommand PauseCommand { get; }
 		public RelayCommand ResetCommand { get; }
@@ -41,6 +55,7 @@ namespace Natural_Selection_Sim.ViewModels
 			StartCommand = new RelayCommand(_ => StartSimulation());
 			PauseCommand = new RelayCommand(_ => PauseSimulation());
 			ResetCommand = new RelayCommand(_ => ResetSimulation());
+			IsRunning = false;
         }
 		private void Run() // call this method to simulate one time step
 		{
@@ -51,6 +66,7 @@ namespace Natural_Selection_Sim.ViewModels
 		}
 		private void StartSimulation()
 		{
+			Debug.WriteLine("Startcmd run");
 			if (Herbivore.IsEnabled)
 			{
 				Herbivore.Start();
@@ -63,13 +79,17 @@ namespace Natural_Selection_Sim.ViewModels
 			{
 				Carnivore.Start();
 			}
+			IsRunning = true ;
 		}
 		private void PauseSimulation()
 		{
-
+            Debug.WriteLine("Pausecmd run");
+            IsRunning = false;
 		}
 		private void ResetSimulation()
 		{
+            Debug.WriteLine("Resetcmd run");
+            IsRunning = false;
 			LineChartViewModel.Reset();
 			Herbivore.Reset();
 			Carnivore.Reset();

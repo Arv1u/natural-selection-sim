@@ -69,7 +69,7 @@ namespace Natural_Selection_Sim.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Natural Selection Sim;V1.0.0.0;component/usercontrols/tablepercinput.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Natural Selection Sim;component/usercontrols/tablepercinput.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UserControls\TablePercInput.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
