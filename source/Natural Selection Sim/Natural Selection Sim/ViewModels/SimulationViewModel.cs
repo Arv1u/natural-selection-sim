@@ -7,9 +7,9 @@ namespace Natural_Selection_Sim.ViewModels
     public class SimulationViewModel : PropertyChangedBase
     {
 		static public LineChartViewModel LineChartViewModel { get; } = new();
-		public SpeciesData Herbivore { get; } = new("Herbivore",SKColors.Green, LineChartViewModel);
-		public SpeciesData Omnivore { get; } = new("Omnivore", SKColors.Orange, LineChartViewModel);
-		public SpeciesData Carnivore { get; } = new("Carnivore", SKColors.Red, LineChartViewModel);
+		public SpeciesData Herbivore { get; } 
+		public SpeciesData Omnivore { get; } 
+		public SpeciesData Carnivore { get; } 
 
 		private int timeStepsPerSecond;
 
@@ -56,9 +56,14 @@ namespace Natural_Selection_Sim.ViewModels
 
 		public SimulationViewModel()
 		{
-			StartCommand = new RelayCommand(_ => StartSimulation());
+            StartCommand = new RelayCommand(_ => StartSimulation(),_ => Herbivore.IsEnabled || Omnivore.IsEnabled || Carnivore.IsEnabled);
 			PauseCommand = new RelayCommand(_ => PauseSimulation());
 			ResetCommand = new RelayCommand(_ => ResetSimulation(), _ => !IsRunning);
+
+			Herbivore = new("Herbivore", SKColors.Green, LineChartViewModel, this);
+			Omnivore = new("Omnivore", SKColors.Orange, LineChartViewModel, this);
+			Carnivore = new("Carnivore", SKColors.Red, LineChartViewModel, this);
+
 			IsRunning = false;
         }
 		private void Run() // call this method to simulate one time step

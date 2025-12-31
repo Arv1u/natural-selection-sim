@@ -1,20 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Natural_Selection_Sim.UserControls
 {
@@ -41,7 +30,7 @@ namespace Natural_Selection_Sim.UserControls
         {
             e.Handled = IsTextAllowed(e.Text);
         }
-        private static readonly Regex _regex = new("[^0-9.-]+");
+        private static readonly Regex _regex = new("[^0-9.-]+"); // only number chars
         private bool IsTextAllowed(string text)
         {
             return _regex.IsMatch(text);
@@ -49,9 +38,9 @@ namespace Natural_Selection_Sim.UserControls
 
 
 
-        public int IntInput
+        public int? IntInput
         {
-            get { return (int)GetValue(IntInputProperty); }
+            get { return (int?)GetValue(IntInputProperty); }
             set 
             {
                 if (value < 0)
@@ -66,11 +55,6 @@ namespace Natural_Selection_Sim.UserControls
             DependencyProperty.Register("IntInput", typeof(int), typeof(TableIntInput), new PropertyMetadata());
 
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
         private void IncreaseButton_Click(object sender, RoutedEventArgs e)
         {
             IntInput++;
@@ -79,6 +63,11 @@ namespace Natural_Selection_Sim.UserControls
         private void DecreaseButton_Click(object sender, RoutedEventArgs e)
         {
             IntInput--;
+        }
+        public event PropertyChangedEventHandler? PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

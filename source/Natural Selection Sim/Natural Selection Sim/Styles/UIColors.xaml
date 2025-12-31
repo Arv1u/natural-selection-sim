@@ -4,8 +4,8 @@
     <SolidColorBrush x:Key="SemiForegroundColor" Color="#18435a" />
     <SolidColorBrush x:Key="ForegroundColor" Color="#2a628f" />
     <SolidColorBrush x:Key="InteractibleColor" Color="#3e92cc" />
-    <SolidColorBrush x:Key="HoverColor" Color="#3e92cc" />
-    <SolidColorBrush x:Key="DisabledColor" Color="Green" />
+    <SolidColorBrush x:Key="HoverColor" Color="#18435a" />
+    <SolidColorBrush x:Key="DisabledColor" Color="LightGray" />
     <SolidColorBrush x:Key="BorderColor" Color="White" />
     <SolidColorBrush x:Key="TextColor" Color="White" />
 </ResourceDictionary>

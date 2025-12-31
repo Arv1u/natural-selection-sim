@@ -12,11 +12,14 @@
     Height="720"
     MinWidth="1100"
     MinHeight="700"
-    Background="#222222"
+    Background="{StaticResource BackgroundColor}"
     Focusable="True"
     mc:Ignorable="d">
-    <Window.Resources />
-
+    <Window.Resources>
+        <Style TargetType="Border">
+            <Setter Property="BorderBrush" Value="{StaticResource BorderColor}"/>
+        </Style>
+    </Window.Resources>
     <!--  Parent Grid  -->
     <Grid Focusable="True">
         <Grid.ColumnDefinitions>
