@@ -6,7 +6,6 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<UseWPF>true</UseWPF>
-		<ApplicationManifest>app.manifest</ApplicationManifest>
 		<ApplicationIcon>favicon.ico</ApplicationIcon>
 
 		<!-- Self-contained WPF settings -->
@@ -18,13 +17,11 @@
 
 	<ItemGroup>
 		<!-- Original removals -->
-		<None Remove="app.manifest" />
 		<Page Remove="Styles\RoundButtonStyle.xaml" />
 		<Page Remove="Styles\SliderStyle.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Resource Include="app.manifest" />
 		<Resource Include="Styles\RoundButtonStyle.xaml" />
 		<Resource Include="Styles\SliderStyle.xaml" />
 	</ItemGroup>

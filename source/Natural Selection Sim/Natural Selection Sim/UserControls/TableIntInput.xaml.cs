@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Diagnostics;
 
 namespace Natural_Selection_Sim.UserControls
 {
@@ -18,13 +19,14 @@ namespace Natural_Selection_Sim.UserControls
             IntInput = 0;
         }
 
-        public static DependencyProperty NumInputIsEnabledProperty = DependencyProperty.Register("NumInputIsEnabled", typeof(bool), typeof(TableIntInput));
 
         public bool NumInputIsEnabled
         {
             get { return (bool)GetValue(NumInputIsEnabledProperty); }
             set { SetValue(NumInputIsEnabledProperty, value); }
         }
+        public static DependencyProperty NumInputIsEnabledProperty = DependencyProperty.Register("NumInputIsEnabled", typeof(bool), typeof(TableIntInput));
+
         //https://stackoverflow.com/questions/1268552/how-do-i-get-a-textbox-to-only-accept-numeric-input-in-wpf
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
@@ -36,8 +38,6 @@ namespace Natural_Selection_Sim.UserControls
             return _regex.IsMatch(text);
         }
 
-
-
         public int? IntInput
         {
             get { return (int?)GetValue(IntInputProperty); }
@@ -46,6 +46,7 @@ namespace Natural_Selection_Sim.UserControls
                 if (value < 0)
                     return;
                 SetValue(IntInputProperty, value);
+                Debug.WriteLine(value);
                 OnPropertyChanged();
             }
         }

@@ -56,7 +56,7 @@ namespace Natural_Selection_Sim.ViewModels
 
 		public SimulationViewModel()
 		{
-            StartCommand = new RelayCommand(_ => StartSimulation(),_ => Herbivore.IsEnabled || Omnivore.IsEnabled || Carnivore.IsEnabled);
+            StartCommand = new RelayCommand(_ => StartSimulation(),_ => Herbivore!.IsEnabled || Omnivore!.IsEnabled || Carnivore!.IsEnabled);
 			PauseCommand = new RelayCommand(_ => PauseSimulation());
 			ResetCommand = new RelayCommand(_ => ResetSimulation(), _ => !IsRunning);
 
@@ -75,6 +75,7 @@ namespace Natural_Selection_Sim.ViewModels
 		}
 		private void StartSimulation()
 		{
+			IsRunning = true ;
 			Debug.WriteLine("Startcmd run");
 			if (Herbivore.IsEnabled)
 			{
@@ -89,7 +90,6 @@ namespace Natural_Selection_Sim.ViewModels
 				Carnivore.Start();
 			}
 			
-			IsRunning = true ;
 		}
 		private void PauseSimulation()
 		{
