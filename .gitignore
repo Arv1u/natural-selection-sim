@@ -4,3 +4,8 @@
 
 /natural-selection-sim/source/Natural Selection Sim/.vs
 
+/source/Natural Selection Sim/.vs
+/source/Natural Selection Sim/Natural Selection Sim/bin/Release/net9.0-windows/win-x64
+*.cache
+/source/Natural Selection Sim/Natural Selection Sim/obj
+/source/Natural Selection Sim/Natural Selection Sim/bin

@@ -7,6 +7,7 @@ namespace Natural_Selection_Sim.ViewModels
 {
     public class SpeciesData : PropertyChangedBase
     {
+        private readonly SimulationViewModel simulationVM;
         private LineChartViewModel LineChartVM { get; set; }
 
         private readonly ObservableCollection<int> populationTrend = new() { };
@@ -28,6 +29,7 @@ namespace Natural_Selection_Sim.ViewModels
             {
                 isEnabled = value;
                 OnPropertyChanged(nameof(IsEnabled));
+                simulationVM.StartCommand.RaiseCanExecuteChanged();
             }
         }
 
@@ -206,11 +208,12 @@ namespace Natural_Selection_Sim.ViewModels
         }
 
         #endregion
-        public SpeciesData(string name,SKColor color, LineChartViewModel lineChartVM)
+        public SpeciesData(string name,SKColor color, LineChartViewModel lineChartVM, SimulationViewModel simulationVM)
         {
             LineChartVM = lineChartVM;
             Name = name;
             this.color = color;
+            this.simulationVM = simulationVM;
             IsEnabled = true;
             SetDefaultStartData();
         }

@@ -23,7 +23,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#7A7A7A" />
 
         <ControlTemplate x:Key="IncreaseButtonTemplate" TargetType="{x:Type ButtonBase}">
-            
+
             <Border
                 x:Name="border"
                 Background="{TemplateBinding Background}"
@@ -39,7 +39,7 @@
                     RecognizesAccessKey="True"
                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
             </Border>
-            
+
             <ControlTemplate.Triggers>
                 <Trigger Property="Button.IsDefaulted" Value="true">
                     <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
@@ -58,14 +58,14 @@
                     <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource Button.Disabled.Foreground}" />
                 </Trigger>
             </ControlTemplate.Triggers>
-            
+
         </ControlTemplate>
-        
+
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="Transparent" />
         <SolidColorBrush x:Key="TextBox.Focus.Border" Color="Transparent" />
-        
+
         <ControlTemplate x:Key="TextBoxTemplate" TargetType="{x:Type TextBoxBase}">
-            
+
             <Border
                 x:Name="border"
                 Background="{TemplateBinding Background}"
@@ -78,7 +78,7 @@
                     HorizontalScrollBarVisibility="Hidden"
                     VerticalScrollBarVisibility="Hidden" />
             </Border>
-            
+
             <ControlTemplate.Triggers>
                 <Trigger Property="IsEnabled" Value="false">
                     <Setter TargetName="border" Property="Opacity" Value="0.56" />
@@ -90,19 +90,19 @@
                     <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource TextBox.Focus.Border}" />
                 </Trigger>
             </ControlTemplate.Triggers>
-            
+
         </ControlTemplate>
     </UserControl.Resources>
 
     <Grid>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        
+
         <Grid Grid.Column="1">
-            
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
