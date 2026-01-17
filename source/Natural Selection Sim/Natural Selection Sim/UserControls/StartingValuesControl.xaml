@@ -20,6 +20,7 @@
         </Grid.RowDefinitions>
 
         <CheckBox
+            Name="IsEnabledCheckbox"
             Grid.Column="0"
             Margin="0,0,0,10"
             VerticalAlignment="Center"
@@ -34,7 +35,9 @@
             FontWeight="Bold"
             Foreground="White"
             Text="{Binding PopulationName, RelativeSource={RelativeSource AncestorType=UserControl}}" />
-        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+        <Grid
+            Grid.Row="1"
+            Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
