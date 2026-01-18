@@ -2,7 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/natural-selection-sim/source/Natural Selection Sim/.vs
-
-/source/Natural Selection Sim/.vs
-/source/Natural Selection Sim/Natural Selection Sim/obj
+.vs/
+.vscode/
+obj/
+bin/
