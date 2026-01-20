@@ -48,6 +48,6 @@ namespace Natural_Selection_Sim.UserControls
         public static readonly DependencyProperty StartingValuesIsEnabledProperty =
             DependencyProperty.Register("StartingValuesIsEnabled", typeof(bool), typeof(StartingValuesControl));
 
-
+   
     }
 }

@@ -92,59 +92,65 @@
             </ControlTemplate.Triggers>
 
         </ControlTemplate>
+        
+        
     </UserControl.Resources>
 
     <Grid>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-
-        <Grid Grid.Column="1">
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <Border BorderThickness="0,0,1,0">
-                <Button
-                    Name="IncreaseButton"
-                    Margin="0"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    Background="{DynamicResource Button.Background}"
-                    Click="IncreaseButton_Click"
-                    Content="+"
-                    FontSize="14"
-                    FontWeight="Bold"
-                    Foreground="{DynamicResource Button.Foreground}"
-                    Template="{DynamicResource IncreaseButtonTemplate}" />
-            </Border>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Border Grid.Column="1" BorderThickness="0,0,1,0">
             <Button
-                Name="DecreaseButton"
-                Grid.Column="2"
+                Name="IncreaseButton"
                 Margin="0"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 Background="{DynamicResource Button.Background}"
-                Click="DecreaseButton_Click"
-                Content="−"
+                Click="IncreaseButton_Click"
+                Content="+"
                 FontSize="14"
                 FontWeight="Bold"
                 Foreground="{DynamicResource Button.Foreground}"
                 Template="{DynamicResource IncreaseButtonTemplate}" />
-        </Grid>
-        <Border BorderThickness="0,0,1,0">
-
-            <TextBox
-                Margin="0"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                PreviewTextInput="TextBox_PreviewTextInput"
-                Template="{DynamicResource TextBoxTemplate}"
-                Text="{Binding IntInput, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=TwoWay}" />
         </Border>
+        <Button
+            Name="DecreaseButton"
+            Grid.Column="3"
+            Margin="0"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Background="{DynamicResource Button.Background}"
+            Click="DecreaseButton_Click"
+            Content="−"
+            FontSize="14"
+            FontWeight="Bold"
+            Foreground="{DynamicResource Button.Foreground}"
+            Template="{DynamicResource IncreaseButtonTemplate}" />
+        <Border
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            BorderThickness="0,0,1,0" />
+        <TextBox
+            Name="InputTextbox"
+            Grid.Column="0"
+            Margin="0"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Template="{DynamicResource TextBoxTemplate}"
+            Text="{Binding DisplayValue, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+            PreviewTextInput="TextBox_PreviewTextInput" 
+            TextChanged="TextBox_TextChanged"
+            GotKeyboardFocus="TextBox_GotFocus"
+            PreviewMouseLeftButtonDown="TextBox_PreviewMouseLeftButtonDown"
+            />
+
+        
     </Grid>
 </UserControl>

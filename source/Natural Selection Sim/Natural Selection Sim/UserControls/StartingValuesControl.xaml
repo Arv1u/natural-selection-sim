@@ -75,13 +75,13 @@
                 Grid.Row="1"
                 Grid.Column="1"
                 BorderThickness="1,1,1,1">
-                <local:TableIntInput IntInput="{Binding PopulationStart, Mode=TwoWay}" IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                <local:TableIntInput IntValue="{Binding PopulationStart, Mode=TwoWay}" IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
             </Border>
             <Border
                 Grid.Row="2"
                 Grid.Column="1"
                 BorderThickness="1,0,1,1">
-                <local:TablePercInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" PercentValue="{Binding BirthRateStart, Mode=TwoWay}" />
+                <local:TablePercInput IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" PercentValue="{Binding BirthRateStart, Mode=TwoWay}"/>
             </Border>
             <Border
                 Grid.Row="3"
@@ -100,13 +100,13 @@
                 Grid.Column="1"
                 BorderThickness="1,0,1,1">
 
-                <local:TableIntInput IntInput="{Binding SpeedStart, Mode=TwoWay}" IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                <local:TableIntInput IntValue="{Binding SpeedStart, Mode=TwoWay}" IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
             </Border>
             <Border
                 Grid.Row="6"
                 Grid.Column="1"
                 BorderThickness="1,0,1,1">
-                <local:TableIntInput IntInput="{Binding SizeStart, Mode=TwoWay}" IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                <local:TableIntInput IntValue="{Binding SizeStart, Mode=TwoWay}" IsEnabled="{Binding StartingValuesIsEnabled, RelativeSource={RelativeSource AncestorType=UserControl}}" />
             </Border>
         </Grid>
     </Grid>

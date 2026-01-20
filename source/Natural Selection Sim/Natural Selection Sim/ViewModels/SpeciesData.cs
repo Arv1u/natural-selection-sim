@@ -215,6 +215,7 @@ namespace Natural_Selection_Sim.ViewModels
             this.color = color;
             this.simulationVM = simulationVM;
             IsEnabled = true;
+
             SetDefaultStartData();
         }
         private void SetDefaultStartData()
