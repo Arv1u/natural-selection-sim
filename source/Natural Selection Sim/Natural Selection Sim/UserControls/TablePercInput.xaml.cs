@@ -15,108 +15,51 @@ namespace Natural_Selection_Sim.UserControls
         public TablePercInput()
         {
             InitializeComponent();
-            PercentValue = 0.00;
-            _editingText = $"{PercentValue * 100:0}";
         }
-
-        public static readonly DependencyProperty NumInputIsEnabledProperty =
-            DependencyProperty.Register(nameof(NumInputIsEnabled), typeof(bool), typeof(TablePercInput));
-
-        public bool NumInputIsEnabled
-        {
-            get => (bool)GetValue(NumInputIsEnabledProperty);
-            set => SetValue(NumInputIsEnabledProperty, value);
-        }
-
+        // the actual value the SpeciesData starting value binds to
         public static readonly DependencyProperty PercentValueProperty =
             DependencyProperty.Register(
                 nameof(PercentValue),
                 typeof(double),
                 typeof(TablePercInput),
-                new PropertyMetadata(0.0, OnPercentValueChanged));
-
-        private static void OnPercentValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+                new PropertyMetadata(OnPercentValueChanged));
+        private static void OnPercentValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) // called whenever PercentValue is changed
         {
-            if (d is TablePercInput control)
-            {
-                control._editingText = $"{control.PercentValue * 100:0}";
-                control.OnPropertyChanged(nameof(DisplayValue));
-            }
+            var control = (TablePercInput)d;
+            control.OnPropertyChanged(nameof(DisplayValue)); // updates the display value 
         }
-
         public double PercentValue
         {
             get => (double)GetValue(PercentValueProperty);
             set
             {
                 value = Math.Round(value, 2);
-                if (value < 0 || value > 1) return;
+
+                if (value < 0 || value > 1) return; // percentage can't be negative / higher than 1
+
                 SetValue(PercentValueProperty, value);
                 OnPropertyChanged(nameof(DisplayValue));
                 Debug.WriteLine(value);
             }
         }
-
-        private string _editingText;
-        public string DisplayValue
+        public int DisplayValue // actual text being displayed
         {
-            get => _editingText + "%";
+            get
+            {
+                return (int)(PercentValue*100);
+            }
             set
             {
-                _editingText = value.Replace("%", "");
-                OnPropertyChanged();
+                PercentValue = (double)value / 100;
             }
         }
 
+        //https://stackoverflow.com/questions/1268552/how-do-i-get-a-textbox-to-only-accept-numeric-input-in-wpf
         private static readonly Regex _regex = new("[^0-9.]");
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = _regex.IsMatch(e.Text);
-        }
-
-        private void TextBox_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
-        {
-            if (sender is TextBox tb)
-                tb.SelectAll();
-        }
-
-        private void TextBox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (sender is TextBox tb && !tb.IsKeyboardFocusWithin)
-            {
-                e.Handled = true;
-                tb.Focus();
-            }
-        }
-
-        private void CommitTextBox(TextBox tb)
-        {
-            if (double.TryParse(tb.Text.Replace("%", ""), out double parsed))
-            {
-                PercentValue = parsed / 100.0;
-            }
-            else
-            {
-                // Reset to current value if parsing fails
-                _editingText = $"{PercentValue * 100:0}";
-                OnPropertyChanged(nameof(DisplayValue));
-            }
-        }
-
-        private void TextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter && sender is TextBox tb)
-            {
-                CommitTextBox(tb);
-                tb.MoveFocus(new TraversalRequest(FocusNavigationDirection.Next));
-            }
-        }
-
-        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (sender is TextBox tb)
-                CommitTextBox(tb);
         }
 
         private void IncreaseButton_Click(object sender, RoutedEventArgs e)
@@ -129,6 +72,33 @@ namespace Natural_Selection_Sim.UserControls
             PercentValue -= 0.01;
         }
 
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var tb = (TextBox)sender;
+
+            if (string.IsNullOrWhiteSpace(tb.Text)) // prevents empty text
+            {
+                tb.Text = Convert.ToString(DisplayValue);
+            }
+        }
+
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e) // selects all text on tbx focus
+        {
+            var tb = (TextBox)sender;
+
+            tb.SelectAll();
+        }
+        //https://stackoverflow.com/questions/660554/how-to-automatically-select-all-text-on-focus-in-wpf-textbox
+        private void TextBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e) // prevents leftclick unselecting text on click
+        {
+            var tb = sender as TextBox;
+            if (!tb.IsKeyboardFocusWithin)
+            {
+                e.Handled = true;
+                tb.Focus();
+            }
+        }
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)
         {

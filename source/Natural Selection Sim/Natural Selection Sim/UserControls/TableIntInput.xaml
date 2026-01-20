@@ -21,7 +21,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#2A2A2A" />
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#3A3A3A" />
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#7A7A7A" />
-        
+
         <ControlTemplate x:Key="IncreaseButtonTemplate" TargetType="{x:Type ButtonBase}">
 
             <Border
@@ -92,20 +92,8 @@
             </ControlTemplate.Triggers>
 
         </ControlTemplate>
-        <ControlTemplate x:Key="TextBlockTemplate" TargetType="{x:Type TextBoxBase}">
-            
-        </ControlTemplate>
-        <Style x:Key="TextblockStyle" TargetType="{x:Type Border}">
-            <Style.Triggers>
-            
-                <Trigger Property="IsEnabled" Value="False">
-                    <Setter Property="Background" Value="#8F999D"/>
-                </Trigger>
-                <Trigger Property="IsEnabled" Value="True">
-                    <Setter Property="Background" Value="White"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+        
+        
     </UserControl.Resources>
 
     <Grid>
@@ -114,12 +102,11 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Border Grid.Column="2" BorderThickness="0,0,1,0">
+        <Border Grid.Column="1" BorderThickness="0,0,1,0">
             <Button
                 Name="IncreaseButton"
                 Margin="0"
@@ -146,35 +133,24 @@
             FontWeight="Bold"
             Foreground="{DynamicResource Button.Foreground}"
             Template="{DynamicResource IncreaseButtonTemplate}" />
-        <Border BorderThickness="0,0,1,0" Grid.Column="0" Grid.ColumnSpan="2">
-
-        </Border>
-            <TextBox
-                Name="InputTextbox"
-                Grid.Column="0"
-                Margin="0"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                PreviewTextInput="TextBox_PreviewTextInput"
-                Template="{DynamicResource TextBoxTemplate}"
-                Text="{Binding IntInput, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=TwoWay}" />
-
-        <Border Grid.Column="1"
-                
-                
-                
-            Style="{StaticResource TextblockStyle}"
-                >
-            
-        
-        <TextBlock
-            TextAlignment="Center"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Text="%"
-            Background="Transparent"
-            
+        <Border
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            BorderThickness="0,0,1,0" />
+        <TextBox
+            Name="InputTextbox"
+            Grid.Column="0"
+            Margin="0"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Template="{DynamicResource TextBoxTemplate}"
+            Text="{Binding DisplayValue, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+            PreviewTextInput="TextBox_PreviewTextInput" 
+            TextChanged="TextBox_TextChanged"
+            GotKeyboardFocus="TextBox_GotFocus"
+            PreviewMouseLeftButtonDown="TextBox_PreviewMouseLeftButtonDown"
             />
-        </Border>
+
+        
     </Grid>
 </UserControl>
