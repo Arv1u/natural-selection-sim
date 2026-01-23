@@ -69,7 +69,7 @@
                 ResetCommand="{Binding ResetCommand}" />
 
             <!--  display timesteps passed  -->
-            <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid Grid.Row="2" Width="auto">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto" />
                     <ColumnDefinition Width="auto" />
@@ -80,7 +80,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     Content="Time Step: "
-                    FontSize="30"
+                    FontSize="20"
                     Foreground="White" />
                 <TextBlock
                     Grid.Row="2"
@@ -89,15 +89,15 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     d:Text="20"
-                    FontSize="30"
+                    FontSize="20"
                     Foreground="White"
                     Text="{Binding CurrentTimeStep}" />
             </Grid>
             <!--  input simulation speed  -->
-            <Grid Grid.Row="2" Grid.Column="2">
+            <Grid Grid.Row="2" Grid.Column="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -108,7 +108,7 @@
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         Content="Steps/sec: "
-                        FontSize="30"
+                        FontSize="20"
                         Foreground="White" />
                     <TextBlock
                         Grid.Column="1"
@@ -116,7 +116,7 @@
                         VerticalAlignment="Center"
                         d:Text="30"
                         Focusable="True"
-                        FontSize="30"
+                        FontSize="20"
                         Foreground="White"
                         Text="{Binding ElementName=StepsPerSecondSlider, Path=Value}" />
                 </Grid>
@@ -131,8 +131,26 @@
                     Style="{DynamicResource SliderStyle}"
                     Value="{Binding TimeStepsPerSecond, Mode=TwoWay}" />
             </Grid>
+            <!--  available food input  -->
+            <Grid Grid.Row="2" Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Foreground="White"
+                    Text="Available Food"
+                    TextWrapping="Wrap" />
+                <ctrl:TableIntInput
+                    Grid.Column="1"
+                    Margin="10,25,10,25"
+                    IntValue="{Binding AvailableFood, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    IsEnabled="{Binding IsRunning, Converter={StaticResource BoolInverterConverter}}" />
+            </Grid>
         </Grid>
-
         <!--  Results Simulation table  -->
         <Viewbox Grid.Row="1" Margin="20,20,20,20">
 

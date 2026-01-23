@@ -50,6 +50,19 @@ namespace Natural_Selection_Sim.ViewModels
 				RunningRaiseExecuteChanged();
 			}
 		}
+		private int availableFood;
+		public int AvailableFood
+		{
+			get
+			{
+				return availableFood;
+			}
+			set
+			{
+				availableFood = value;
+				OnPropertyChanged();
+			}
+		}
 		public RelayCommand StartCommand { get; } 
 		public RelayCommand PauseCommand { get; }
 		public RelayCommand ResetCommand { get; }
@@ -106,7 +119,6 @@ namespace Natural_Selection_Sim.ViewModels
 		private void RunningRaiseExecuteChanged()
 		{
             ResetCommand.RaiseCanExecuteChanged();
-
         }
     }
 }
