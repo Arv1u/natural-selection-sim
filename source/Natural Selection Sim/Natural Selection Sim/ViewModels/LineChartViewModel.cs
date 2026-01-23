@@ -7,9 +7,9 @@ using System.Collections.ObjectModel;
 namespace Natural_Selection_Sim.ViewModels
 {
     /// <summary>
-    ///	Definitions for axes, legend and linechart data.
+    ///	Needed to bind data to the UI linechart. Contains definitions for axes, legend and linechart data.
     /// </summary>
-    public class LineChartViewModel 
+    public class LineChartViewModel : PropertyChangedBase
     {
         /// <summary>
         /// All line series integer data to display on the chart.

@@ -5,6 +5,9 @@ using SkiaSharp;
 using System.Collections.ObjectModel;
 namespace Natural_Selection_Sim.ViewModels
 {
+    /// <summary>
+    /// Contains all data displayed by the UI for an individual species.
+    /// </summary>
     public class SpeciesData : PropertyChangedBase
     {
         private readonly SimulationViewModel simulationVM; // reference needed to notify SimulationViewModel when IsEnabled has changed

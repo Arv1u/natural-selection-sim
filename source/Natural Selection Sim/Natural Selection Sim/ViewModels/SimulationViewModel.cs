@@ -6,7 +6,10 @@ namespace Natural_Selection_Sim.ViewModels
 {
     public class SimulationViewModel : PropertyChangedBase
     {
+		// Property backing the UI's linechart
 		public LineChartViewModel LineChartViewModel { get; } = new();
+
+		// Simulated data for each individual species.
 		public SpeciesData Herbivore { get; } 
 		public SpeciesData Omnivore { get; } 
 		public SpeciesData Carnivore { get; } 
@@ -63,6 +66,7 @@ namespace Natural_Selection_Sim.ViewModels
 				OnPropertyChanged();
 			}
 		}
+		// Relaycommands bind to the Command button property. They are executed on button click and define whether the button is active or not.
 		public RelayCommand StartCommand { get; } 
 		public RelayCommand PauseCommand { get; }
 		public RelayCommand ResetCommand { get; }
@@ -82,6 +86,9 @@ namespace Natural_Selection_Sim.ViewModels
 
 			IsRunning = false;
         }
+		/// <summary>
+		/// Method executed to simulate one timestep.
+		/// </summary>
 		private void Run() // call this method to simulate one time step
 		{
 			//Herbivore.Update();
@@ -89,6 +96,9 @@ namespace Natural_Selection_Sim.ViewModels
 			//Carnivore.Update();
 			//call these with appropiately calculated data to update the UI
 		}
+		/// <summary>
+		/// Executed when the start button is pressed.
+		/// </summary>
 		private void StartSimulation()
 		{
 			IsRunning = true ;
@@ -106,11 +116,17 @@ namespace Natural_Selection_Sim.ViewModels
 				Carnivore.Start();
 			}
 		}
+		/// <summary>
+		/// Executed when pressing the pause button.
+		/// </summary>
 		private void PauseSimulation()
 		{
             Debug.WriteLine("Pausecmd run");
             IsRunning = false;
         }
+		/// <summary>
+		/// Executed when the reset button is pressed.
+		/// </summary>
         private void ResetSimulation()
 		{
             Debug.WriteLine("Resetcmd run");
