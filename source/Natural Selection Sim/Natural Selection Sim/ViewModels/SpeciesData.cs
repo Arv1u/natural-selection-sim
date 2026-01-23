@@ -7,12 +7,18 @@ namespace Natural_Selection_Sim.ViewModels
 {
     public class SpeciesData : PropertyChangedBase
     {
-        private readonly SimulationViewModel simulationVM;
+        private readonly SimulationViewModel simulationVM; // reference needed to notify SimulationViewModel when IsEnabled has changed
         private LineChartViewModel LineChartVM { get; set; }
 
+        /// <summary>
+        /// History of the population trend. 1 index = 1 timestep
+        /// </summary>
         private readonly ObservableCollection<int> populationTrend = new() { };
 
-        public LineSeries<int>? Series { get; set; }
+        /// <summary>
+        /// Object the SkiaSharp package uses to display graphs in cartesian charts.
+        /// </summary>
+        public LineSeries<int> Series { get; set; }
 
         private readonly SKColor color;
 
@@ -244,6 +250,9 @@ namespace Natural_Selection_Sim.ViewModels
             };
             LineChartVM.AddSeries(Series);    
         }
+        /// <summary>
+        /// Updates properties with current simulation data.
+        /// </summary>
         public void Update(int newPopulation, double newBirthRateAvg, double newDeathRateAvg, double newMutationRateAvg, int newSpeedAvg, int newSizeAvg)
         {
             PopulationCurrent = newPopulation;
@@ -253,18 +262,20 @@ namespace Natural_Selection_Sim.ViewModels
             SpeedAvg = newSpeedAvg;
             SizeAvg = newSizeAvg;
         }
-        public void UpdateDummyData()
+        /// <summary>
+        /// Updates properties with dummy data for testing purposes.
+        /// </summary>
+        public void UpdateDummyData() 
         {
             
             Random rand = new Random();
             
-            double newBirthRateAvg = rand.NextDouble() * 0.5 + 0.1; // Random birth rate between 0.1 and 0.6
-            double newDeathRateAvg = rand.NextDouble() * 0.5 + 0.1; // Random death rate between 0.1 and 0.6
-            double newMutationRateAvg = rand.NextDouble() * 0.5 + 0.1; // Random mutation rate between 0.1 and 0.6
-            int newSpeedAvg = rand.Next(1, 10); // Random speed between 1 and 10
-            int newSizeAvg = rand.Next(5, 15); // Random size between 5 and 15
-
-            // Update the properties
+            double newBirthRateAvg = rand.NextDouble() * 0.5 + 0.1; 
+            double newDeathRateAvg = rand.NextDouble() * 0.5 + 0.1; 
+            double newMutationRateAvg = rand.NextDouble() * 0.5 + 0.1; 
+            int newSpeedAvg = rand.Next(1, 10); 
+            int newSizeAvg = rand.Next(5, 15); 
+         
             PopulationCurrent += rand.Next(-10, +11);
             BirthRateAvg = newBirthRateAvg;
             DeathRateAvg = newDeathRateAvg;
@@ -272,6 +283,9 @@ namespace Natural_Selection_Sim.ViewModels
             SpeedAvg = newSpeedAvg;
             SizeAvg = newSizeAvg;
         }
+        /// <summary>
+        /// Clears all saved data.
+        /// </summary>
         public void Reset()
         {
             LineChartVM.Series.Remove(Series);

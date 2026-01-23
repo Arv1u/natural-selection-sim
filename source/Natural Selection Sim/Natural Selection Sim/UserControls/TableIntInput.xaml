@@ -92,8 +92,8 @@
             </ControlTemplate.Triggers>
 
         </ControlTemplate>
-        
-        
+
+
     </UserControl.Resources>
 
     <Grid>
@@ -143,14 +143,13 @@
             Margin="0"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
-            Template="{DynamicResource TextBoxTemplate}"
-            Text="{Binding DisplayValue, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-            PreviewTextInput="TextBox_PreviewTextInput" 
-            TextChanged="TextBox_TextChanged"
             GotKeyboardFocus="TextBox_GotFocus"
             PreviewMouseLeftButtonDown="TextBox_PreviewMouseLeftButtonDown"
-            />
+            PreviewTextInput="TextBox_PreviewTextInput"
+            Template="{DynamicResource TextBoxTemplate}"
+            Text="{Binding DisplayValue, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            TextChanged="TextBox_TextChanged" />
 
-        
+
     </Grid>
 </UserControl>

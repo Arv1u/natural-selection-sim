@@ -17,7 +17,7 @@
     mc:Ignorable="d">
     <Window.Resources>
         <Style TargetType="Border">
-            <Setter Property="BorderBrush" Value="{StaticResource BorderColor}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BorderColor}" />
         </Style>
     </Window.Resources>
     <!--  Parent Grid  -->
@@ -66,8 +66,8 @@
                 Margin="10"
                 FontSize="30"
                 FontWeight="Bold"
-                ResetCommand="{Binding ResetCommand}"/>
-            
+                ResetCommand="{Binding ResetCommand}" />
+
             <!--  display timesteps passed  -->
             <Grid Grid.Row="2" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>

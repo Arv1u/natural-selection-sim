@@ -89,7 +89,6 @@ namespace Natural_Selection_Sim.ViewModels
 			{
 				Carnivore.Start();
 			}
-			
 		}
 		private void PauseSimulation()
 		{

@@ -9,12 +9,12 @@ namespace Natural_Selection_Sim.ViewModels
     /// <summary>
     ///	Definitions for axes, legend and linechart data.
     /// </summary>
-    public class LineChartViewModel : PropertyChangedBase
+    public class LineChartViewModel 
     {
         /// <summary>
         /// All line series integer data to display on the chart.
         /// </summary>
-        public ObservableCollection<LineSeries<int>?> Series { get; set; } = new();
+        public ObservableCollection<LineSeries<int>> Series { get; set; } = new();
 
         /// <summary>
         /// Defines implementation of the X-Axes.
@@ -55,10 +55,10 @@ namespace Natural_Selection_Sim.ViewModels
         /// <summary>
         /// Adds a line series of integer data to the collection of series displayed by the chart.
         /// </summary>
-        /// <param name="data">The line series containing integer data points to add.</param>
-        public void AddSeries(LineSeries<int> data)
+        /// <param name="series">The line series containing integer data points to add.</param>
+        public void AddSeries(LineSeries<int> series)
         {
-            Series?.Add(data);
+            Series.Add(series);
         }
 
         /// <summary>
