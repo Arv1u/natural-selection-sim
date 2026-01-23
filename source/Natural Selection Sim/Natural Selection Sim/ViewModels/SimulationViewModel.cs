@@ -6,7 +6,7 @@ namespace Natural_Selection_Sim.ViewModels
 {
     public class SimulationViewModel : PropertyChangedBase
     {
-		static public LineChartViewModel LineChartViewModel { get; } = new();
+		public LineChartViewModel LineChartViewModel { get; } = new();
 		public SpeciesData Herbivore { get; } 
 		public SpeciesData Omnivore { get; } 
 		public SpeciesData Carnivore { get; } 
@@ -67,6 +67,7 @@ namespace Natural_Selection_Sim.ViewModels
 		public RelayCommand PauseCommand { get; }
 		public RelayCommand ResetCommand { get; }
 
+		private readonly int defaultAvailableFood = 100;
 		public SimulationViewModel()
 		{
             StartCommand = new RelayCommand(_ => StartSimulation(),_ => Herbivore!.IsEnabled || Omnivore!.IsEnabled || Carnivore!.IsEnabled);
@@ -76,6 +77,8 @@ namespace Natural_Selection_Sim.ViewModels
 			Herbivore = new("Herbivore", SKColors.Green, LineChartViewModel, this);
 			Omnivore = new("Omnivore", SKColors.Orange, LineChartViewModel, this);
 			Carnivore = new("Carnivore", SKColors.Red, LineChartViewModel, this);
+
+			AvailableFood = defaultAvailableFood;
 
 			IsRunning = false;
         }
@@ -115,6 +118,7 @@ namespace Natural_Selection_Sim.ViewModels
 			Herbivore.Reset();
 			Carnivore.Reset();
 			Omnivore.Reset();
+			AvailableFood = defaultAvailableFood;
 		}
 		private void RunningRaiseExecuteChanged()
 		{
