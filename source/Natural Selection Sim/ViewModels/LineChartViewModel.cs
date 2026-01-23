@@ -23,7 +23,7 @@ namespace Natural_Selection_Sim.ViewModels
         {
             new Axis
             {
-                Name = "Population",
+                Name = "Time",
                 TextSize = 14,
                 NamePaint = new SolidColorPaint(SKColors.White),
                 LabelsPaint = new SolidColorPaint(SKColors.Gray)
@@ -37,7 +37,7 @@ namespace Natural_Selection_Sim.ViewModels
         {
             new Axis
             {
-                Name = "Time",
+                Name = "Population",
                 TextSize = 14,
                 NamePaint = new SolidColorPaint(SKColors.White),
                 LabelsPaint = new SolidColorPaint(SKColors.Gray)
