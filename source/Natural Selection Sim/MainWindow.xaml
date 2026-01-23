@@ -264,7 +264,7 @@
         
         <!--  Starting values  -->
         <Viewbox Grid.Column="1" Margin="20,30,20,20">
-            <Grid IsEnabled="{Binding IsRunning, Converter={StaticResource BoolInverterConverter}}">
+            <Grid IsEnabled="{Binding IsReset}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="1*" />

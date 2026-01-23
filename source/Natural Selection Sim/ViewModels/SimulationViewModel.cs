@@ -71,7 +71,22 @@ namespace Natural_Selection_Sim.ViewModels
 		public RelayCommand PauseCommand { get; }
 		public RelayCommand ResetCommand { get; }
 
+		private bool isReset;
+		public bool IsReset
+		{
+			get
+			{
+				return isReset;
+			}
+			set
+			{
+				isReset = value;
+				OnPropertyChanged();
+			}
+		}
+
 		private readonly int defaultAvailableFood = 100;
+
 		public SimulationViewModel()
 		{
             StartCommand = new RelayCommand(_ => StartSimulation(),_ => Herbivore!.IsEnabled || Omnivore!.IsEnabled || Carnivore!.IsEnabled);
@@ -83,7 +98,7 @@ namespace Natural_Selection_Sim.ViewModels
 			Carnivore = new("Carnivore", SKColors.Red, LineChartViewModel, this);
 
 			AvailableFood = defaultAvailableFood;
-
+			IsReset = true;
 			IsRunning = false;
         }
 		/// <summary>
@@ -101,27 +116,37 @@ namespace Natural_Selection_Sim.ViewModels
 		/// </summary>
 		private void StartSimulation()
 		{
-			IsRunning = true ;
-			Debug.WriteLine("Startcmd run");
-			if (Herbivore.IsEnabled)
+			Debug.WriteLine("Starting Simulation...");
+
+			if (IsReset)
 			{
+				StartPopulations();
+				IsReset = false;
+			}
+
+            IsRunning = true;
+        }
+		private void StartPopulations()
+		{
+            if (Herbivore.IsEnabled)
+            {
 				Herbivore.Start();
-			}
-			if (Omnivore.IsEnabled)
-			{
-				Omnivore.Start();
-			}
-			if (Carnivore.IsEnabled)
-			{
-				Carnivore.Start();
-			}
-		}
+            }
+            if (Omnivore.IsEnabled)
+            {
+                Omnivore.Start();
+            }
+            if (Carnivore.IsEnabled)
+            {
+                Carnivore.Start();
+            }
+        }
 		/// <summary>
 		/// Executed when pressing the pause button.
 		/// </summary>
 		private void PauseSimulation()
 		{
-            Debug.WriteLine("Pausecmd run");
+            Debug.WriteLine("Pausing simulation...");
             IsRunning = false;
         }
 		/// <summary>
@@ -129,12 +154,15 @@ namespace Natural_Selection_Sim.ViewModels
 		/// </summary>
         private void ResetSimulation()
 		{
-            Debug.WriteLine("Resetcmd run");
+            Debug.WriteLine("Resetting simulation...");
+
 			LineChartViewModel.Reset();
 			Herbivore.Reset();
 			Carnivore.Reset();
 			Omnivore.Reset();
+
 			AvailableFood = defaultAvailableFood;
+            IsReset = true;
 		}
 		private void RunningRaiseExecuteChanged()
 		{
