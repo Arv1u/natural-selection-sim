@@ -20,7 +20,7 @@
             <Setter Property="BorderBrush" Value="{StaticResource BorderColor}" />
         </Style>
     </Window.Resources>
-    
+
     <!--  Parent Grid  -->
     <Grid Focusable="True">
         <Grid.ColumnDefinitions>
@@ -170,7 +170,7 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                
+
                 <!--  Row/Column Headers  -->
                 <ctrl:TableHeader x:Name="TopLeftBorders" />
 
@@ -183,7 +183,7 @@
                 <ctrl:TableHeader Grid.Row="4" HeaderName="Mutationrate Ø" />
                 <ctrl:TableHeader Grid.Row="5" HeaderName="Speed Ø" />
                 <ctrl:TableHeader Grid.Row="6" HeaderName="Size Ø" />
-                
+
                 <!--  Simulation Data  -->
                 <ctrl:TableData
                     Grid.Row="1"
@@ -261,7 +261,7 @@
                     Data="{Binding Carnivore.SizeAvg}" />
             </Grid>
         </Viewbox>
-        
+
         <!--  Starting values  -->
         <Viewbox Grid.Column="1" Margin="20,30,20,20">
             <Grid IsEnabled="{Binding IsReset}">
@@ -304,7 +304,7 @@
                     StartingValuesIsEnabled="{Binding IsEnabled, Mode=TwoWay}" />
             </Grid>
         </Viewbox>
-        
+
         <!--  LineGraph  -->
         <lvc:CartesianChart
             Grid.Row="1"
