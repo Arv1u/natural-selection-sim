@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<RootNamespace>Natural_Selection_Sim</RootNamespace>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<ApplicationIcon>favicon.ico</ApplicationIcon>
+
+		<!-- Self-contained WPF settings -->
+		<PublishSingleFile>true</PublishSingleFile>
+		<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+		<EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
+		<PublishTrimmed>false</PublishTrimmed>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Original removals -->
+		<Page Remove="Styles\RoundButtonStyle.xaml" />
+		<Page Remove="Styles\SliderStyle.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Styles\RoundButtonStyle.xaml" />
+		<Resource Include="Styles\SliderStyle.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="favicon.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- NuGet -->
+		<PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-rc5.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Optional trimmer roots, not strictly needed since PublishTrimmed=false -->
+		<TrimmerRootAssembly Include="LiveChartsCore" />
+		<TrimmerRootAssembly Include="LiveChartsCore.SkiaSharpView" />
+		<TrimmerRootAssembly Include="SkiaSharp" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="UserControls\TablePercInput.xaml.cs">
+	    <SubType>Code</SubType>
+	  </Compile>
+	</ItemGroup>
+</Project>
