@@ -2,6 +2,7 @@
 using SkiaSharp;
 using System.Diagnostics;
 using System.Timers;
+using System.Windows.Threading;
 
 namespace Natural_Selection_Sim.ViewModels
 {
@@ -22,8 +23,8 @@ namespace Natural_Selection_Sim.ViewModels
 			get { return timeStepsPerSecond; }
 			set 
 			{
-				simulationTimer.Interval = 1000 / value;
-				timeStepsPerSecond = value;
+                simulationTimer.Interval = TimeSpan.FromMilliseconds(1000.0 / value);
+                timeStepsPerSecond = value;
 				OnPropertyChanged();
 			}
 		}
@@ -51,7 +52,7 @@ namespace Natural_Selection_Sim.ViewModels
 					return;
 
 				isRunning = value;
-				simulationTimer.Enabled = value;
+				simulationTimer.IsEnabled = value;
 				OnPropertyChanged(nameof(IsRunning));
 				RunningRaiseExecuteChanged();
 			}
@@ -90,7 +91,7 @@ namespace Natural_Selection_Sim.ViewModels
 		}
 
 		private readonly int defaultAvailableFood = 100;
-        private readonly System.Timers.Timer simulationTimer = new(1000);
+		private readonly DispatcherTimer simulationTimer;
         public SimulationViewModel()
 		{
             StartCommand = new RelayCommand(_ => StartSimulation(),_ => Herbivore!.IsEnabled || Omnivore!.IsEnabled || Carnivore!.IsEnabled);
@@ -104,15 +105,24 @@ namespace Natural_Selection_Sim.ViewModels
 			AvailableFood = defaultAvailableFood;
 			IsReset = true;
 			IsRunning = false;
-			simulationTimer.AutoReset = true;
-			simulationTimer.Enabled = false;
-			simulationTimer.Elapsed += Run;
+            simulationTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(1),
+                IsEnabled = false
+            };
+
+            simulationTimer.Tick += Run;
         }
 		/// <summary>
 		/// Method executed to simulate one timestep.
 		/// </summary>
-		private void Run(Object? source, ElapsedEventArgs e) // call this method to simulate one time step
+		private void Run(object? sender, EventArgs e) // call this method to simulate one time step
 		{
+			if(Herbivore.isDead && Carnivore.isDead && Omnivore.isDead)
+			{
+				PauseCommand.Execute(null);
+				return;
+            }
 			//Herbivore.Update();
 			//Omnivore.Update();
 			//Carnivore.Update();

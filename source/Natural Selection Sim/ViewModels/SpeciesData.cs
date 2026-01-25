@@ -217,7 +217,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged(nameof(SizeAvg));
             }
         }
-
+        public bool isDead = false;
         #endregion
         public SpeciesData(string name,SKColor color, LineChartViewModel lineChartVM, SimulationViewModel simulationVM)
         {
@@ -243,6 +243,7 @@ namespace Natural_Selection_Sim.ViewModels
         /// </summary>
         public void Start()
         {
+            isDead = false;
             Series = new()
             {
                 Name = this.Name,
@@ -273,7 +274,10 @@ namespace Natural_Selection_Sim.ViewModels
         /// </summary>
         public void UpdateDummyData() 
         {
-            
+            if (isDead)
+            {
+                return;
+            }
             Random rand = new Random();
             
             double newBirthRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1,2); 
@@ -281,8 +285,14 @@ namespace Natural_Selection_Sim.ViewModels
             double newMutationRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1, 2); 
             int newSpeedAvg = rand.Next(1, 10); 
             int newSizeAvg = rand.Next(5, 15); 
-         
-            PopulationCurrent += rand.Next(-10, +11);
+            int randPopChange = rand.Next(-10, +11);
+            if(PopulationCurrent + randPopChange <= 0)
+            {
+                isDead = true;
+                PopulationCurrent = 0;
+                return;
+            }
+            PopulationCurrent += randPopChange;
             BirthRateAvg = newBirthRateAvg;
             DeathRateAvg = newDeathRateAvg;
             MutationRateAvg = newMutationRateAvg;
