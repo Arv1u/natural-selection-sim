@@ -294,7 +294,6 @@ namespace Natural_Selection_Sim.ViewModels
             LineChartVM.Series.Remove(Series);
             populationTrend.Clear();
             SetDefaultStartData();
-            PopulationCurrent = 0;
             BirthRateAvg = 0;
             DeathRateAvg = 0;
             MutationRateAvg = 0;

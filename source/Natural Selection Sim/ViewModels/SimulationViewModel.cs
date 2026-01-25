@@ -111,6 +111,7 @@ namespace Natural_Selection_Sim.ViewModels
 			//Omnivore.Update();
 			//Carnivore.Update();
 			//call these with appropiately calculated data to update the UI
+			CurrentTimeStep++;
 		}
 		/// <summary>
 		/// Executed when the start button is pressed.
