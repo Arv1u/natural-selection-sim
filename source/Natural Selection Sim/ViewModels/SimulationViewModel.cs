@@ -1,6 +1,7 @@
 ﻿using Natural_Selection_Sim.MVVM;
 using SkiaSharp;
 using System.Diagnostics;
+using System.Timers;
 
 namespace Natural_Selection_Sim.ViewModels
 {
@@ -21,6 +22,7 @@ namespace Natural_Selection_Sim.ViewModels
 			get { return timeStepsPerSecond; }
 			set 
 			{
+				simulationTimer.Interval = 1000 / value;
 				timeStepsPerSecond = value;
 				OnPropertyChanged();
 			}
@@ -49,6 +51,7 @@ namespace Natural_Selection_Sim.ViewModels
 					return;
 
 				isRunning = value;
+				simulationTimer.Enabled = value;
 				OnPropertyChanged(nameof(IsRunning));
 				RunningRaiseExecuteChanged();
 			}
@@ -87,8 +90,8 @@ namespace Natural_Selection_Sim.ViewModels
 		}
 
 		private readonly int defaultAvailableFood = 100;
-
-		public SimulationViewModel()
+        private readonly System.Timers.Timer simulationTimer = new(1000);
+        public SimulationViewModel()
 		{
             StartCommand = new RelayCommand(_ => StartSimulation(),_ => Herbivore!.IsEnabled || Omnivore!.IsEnabled || Carnivore!.IsEnabled);
 			PauseCommand = new RelayCommand(_ => PauseSimulation());
@@ -101,16 +104,22 @@ namespace Natural_Selection_Sim.ViewModels
 			AvailableFood = defaultAvailableFood;
 			IsReset = true;
 			IsRunning = false;
+			simulationTimer.AutoReset = true;
+			simulationTimer.Enabled = false;
+			simulationTimer.Elapsed += Run;
         }
 		/// <summary>
 		/// Method executed to simulate one timestep.
 		/// </summary>
-		private void Run() // call this method to simulate one time step
+		private void Run(Object? source, ElapsedEventArgs e) // call this method to simulate one time step
 		{
 			//Herbivore.Update();
 			//Omnivore.Update();
 			//Carnivore.Update();
 			//call these with appropiately calculated data to update the UI
+			Herbivore.UpdateDummyData();
+			Carnivore.UpdateDummyData();
+			Omnivore.UpdateDummyData();
 		}
 		/// <summary>
 		/// Executed when the start button is pressed.

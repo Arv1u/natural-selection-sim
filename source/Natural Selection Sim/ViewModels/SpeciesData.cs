@@ -273,9 +273,9 @@ namespace Natural_Selection_Sim.ViewModels
             
             Random rand = new Random();
             
-            double newBirthRateAvg = rand.NextDouble() * 0.5 + 0.1; 
-            double newDeathRateAvg = rand.NextDouble() * 0.5 + 0.1; 
-            double newMutationRateAvg = rand.NextDouble() * 0.5 + 0.1; 
+            double newBirthRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1,2); 
+            double newDeathRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1, 2); 
+            double newMutationRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1, 2); 
             int newSpeedAvg = rand.Next(1, 10); 
             int newSizeAvg = rand.Next(5, 15); 
          
