@@ -66,6 +66,7 @@ namespace Natural_Selection_Sim.ViewModels
 				OnPropertyChanged();
 			}
 		}
+		
 		// Relaycommands bind to the Command button property. They are executed on button click and define whether the button is active or not.
 		public RelayCommand StartCommand { get; } 
 		public RelayCommand PauseCommand { get; }
