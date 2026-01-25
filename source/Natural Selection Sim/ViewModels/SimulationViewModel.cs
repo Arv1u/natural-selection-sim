@@ -120,6 +120,7 @@ namespace Natural_Selection_Sim.ViewModels
 			Herbivore.UpdateDummyData();
 			Carnivore.UpdateDummyData();
 			Omnivore.UpdateDummyData();
+			CurrentTimeStep++;
 		}
 		/// <summary>
 		/// Executed when the start button is pressed.
@@ -170,7 +171,7 @@ namespace Natural_Selection_Sim.ViewModels
 			Herbivore.Reset();
 			Carnivore.Reset();
 			Omnivore.Reset();
-
+			CurrentTimeStep = 0;
 			AvailableFood = defaultAvailableFood;
             IsReset = true;
 		}

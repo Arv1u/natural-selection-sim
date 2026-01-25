@@ -3,6 +3,7 @@ using LiveChartsCore.SkiaSharpView.Painting;
 using Natural_Selection_Sim.MVVM;
 using SkiaSharp;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 namespace Natural_Selection_Sim.ViewModels
 {
     /// <summary>
@@ -64,6 +65,7 @@ namespace Natural_Selection_Sim.ViewModels
             {
                 populationStart = value;
                 OnPropertyChanged();
+                Debug.WriteLine("Staring Pop: " + value);
             }
         }
 
@@ -251,7 +253,8 @@ namespace Natural_Selection_Sim.ViewModels
                 IsVisibleAtLegend = true,
                 Stroke = new SolidColorPaint(color)
             };
-            LineChartVM.AddSeries(Series);    
+            LineChartVM.AddSeries(Series);
+            PopulationCurrent = PopulationStart;
         }
         /// <summary>
         /// Updates properties with current simulation data.
@@ -294,7 +297,6 @@ namespace Natural_Selection_Sim.ViewModels
             LineChartVM.Series.Remove(Series);
             populationTrend.Clear();
             SetDefaultStartData();
-            PopulationCurrent = 0;
             BirthRateAvg = 0;
             DeathRateAvg = 0;
             MutationRateAvg = 0;
