@@ -40,9 +40,7 @@ namespace Natural_Selection_Sim.ViewModels
                 Name = "Population",
                 TextSize = 14,
                 NamePaint = new SolidColorPaint(SKColors.White),
-                LabelsPaint = new SolidColorPaint(SKColors.Gray),
-                MinStep = 1,
-                MinLimit = 0
+                LabelsPaint = new SolidColorPaint(SKColors.Gray)
             }
         };
 

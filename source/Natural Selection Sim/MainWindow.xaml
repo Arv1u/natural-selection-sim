@@ -20,7 +20,7 @@
             <Setter Property="BorderBrush" Value="{StaticResource BorderColor}" />
         </Style>
     </Window.Resources>
-
+    
     <!--  Parent Grid  -->
     <Grid Focusable="True">
         <Grid.ColumnDefinitions>
@@ -70,106 +70,87 @@
                 ResetCommand="{Binding ResetCommand}" />
 
             <!--  display timesteps passed  -->
-            <Viewbox
-                Grid.Row="2"
-                Width="auto"
-                Margin="0,0,10,0">
+            <Grid Grid.Row="2" Width="auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="2"
+                    Margin="10,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Content="Time Step: "
+                    FontSize="20"
+                    Foreground="White" />
+                <TextBlock
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    d:Text="20"
+                    FontSize="20"
+                    Foreground="White"
+                    Text="{Binding CurrentTimeStep}" />
+            </Grid>
+            <!--  input simulation speed  -->
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto" />
-                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto " />
                     </Grid.ColumnDefinitions>
                     <Label
-                        Grid.Row="2"
-                        Margin="10,0,0,0"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
-                        Content="Time Step: "
+                        Content="Steps/sec: "
                         FontSize="20"
                         Foreground="White" />
                     <TextBlock
-                        Grid.Row="2"
                         Grid.Column="1"
-                        Margin="0"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
-                        d:Text="20"
+                        d:Text="30"
+                        Focusable="True"
                         FontSize="20"
                         Foreground="White"
-                        Text="{Binding CurrentTimeStep}" />
+                        Text="{Binding ElementName=StepsPerSecondSlider, Path=Value}" />
                 </Grid>
-            </Viewbox>
-
-            <!--  input simulation speed  -->
-            <Viewbox
-                Grid.Row="2"
-                Grid.Column="1"
-                Margin="10,0,10,0">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="1*" />
-                        <RowDefinition Height="1*" />
-                    </Grid.RowDefinitions>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto" />
-                            <ColumnDefinition Width="auto " />
-                        </Grid.ColumnDefinitions>
-                        <Label
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Center"
-                            Content="Steps/sec: "
-                            FontSize="20"
-                            Foreground="White" />
-                        <TextBlock
-                            Grid.Column="1"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Center"
-                            d:Text="30"
-                            Focusable="True"
-                            FontSize="20"
-                            Foreground="White"
-                            Text="{Binding ElementName=StepsPerSecondSlider, Path=Value}" />
-                    </Grid>
-                    <Slider
-                        Name="StepsPerSecondSlider"
-                        Grid.Row="1"
-                        HorizontalAlignment="Stretch"
-                        VerticalAlignment="Center"
-                        IsSnapToTickEnabled="True"
-                        Maximum="100"
-                        Minimum="1"
-                        Style="{DynamicResource SliderStyle}"
-                        Value="{Binding TimeStepsPerSecond, Mode=TwoWay}" />
-                </Grid>
-            </Viewbox>
+                <Slider
+                    Name="StepsPerSecondSlider"
+                    Grid.Row="1"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center"
+                    IsSnapToTickEnabled="True"
+                    Maximum="100"
+                    Minimum="1"
+                    Style="{DynamicResource SliderStyle}"
+                    Value="{Binding TimeStepsPerSecond, Mode=TwoWay}" />
+            </Grid>
             <!--  available food input  -->
-            <Viewbox
-                Grid.Row="2"
-                Grid.Column="2"
-                Margin="10,0,0,0"
-                Stretch="Uniform">
-
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                    </Grid.RowDefinitions>
-                    <TextBlock
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Center"
-                        FontSize="30"
-                        Foreground="White"
-                        Text="Available Food"
-                        TextAlignment="Center"
-                        TextWrapping="Wrap" />
-                    <ctrl:TableIntInput
-                        Grid.Row="1"
-                        Margin="0,10,0,0"
-                        IntValue="{Binding AvailableFood, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                        IsEnabled="{Binding IsRunning, Converter={StaticResource BoolInverterConverter}}" />
-                </Grid>
-            </Viewbox>
+            <Grid Grid.Row="2" Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Foreground="White"
+                    Text="Available Food"
+                    TextWrapping="Wrap" />
+                <ctrl:TableIntInput
+                    Grid.Column="1"
+                    Margin="10,25,10,25"
+                    IntValue="{Binding AvailableFood, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    IsEnabled="{Binding IsRunning, Converter={StaticResource BoolInverterConverter}}" />
+            </Grid>
         </Grid>
         <!--  Results Simulation table  -->
         <Viewbox Grid.Row="1" Margin="20,20,20,20">
@@ -189,7 +170,7 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-
+                
                 <!--  Row/Column Headers  -->
                 <ctrl:TableHeader x:Name="TopLeftBorders" />
 
@@ -202,7 +183,7 @@
                 <ctrl:TableHeader Grid.Row="4" HeaderName="Mutationrate Ø" />
                 <ctrl:TableHeader Grid.Row="5" HeaderName="Speed Ø" />
                 <ctrl:TableHeader Grid.Row="6" HeaderName="Size Ø" />
-
+                
                 <!--  Simulation Data  -->
                 <ctrl:TableData
                     Grid.Row="1"
@@ -280,7 +261,7 @@
                     Data="{Binding Carnivore.SizeAvg}" />
             </Grid>
         </Viewbox>
-
+        
         <!--  Starting values  -->
         <Viewbox Grid.Column="1" Margin="20,30,20,20">
             <Grid IsEnabled="{Binding IsReset}">
@@ -323,7 +304,7 @@
                     StartingValuesIsEnabled="{Binding IsEnabled, Mode=TwoWay}" />
             </Grid>
         </Viewbox>
-
+        
         <!--  LineGraph  -->
         <lvc:CartesianChart
             Grid.Row="1"
