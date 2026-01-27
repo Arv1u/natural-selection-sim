@@ -262,7 +262,7 @@ namespace Natural_Selection_Sim.ViewModels
         /// </summary>
         public void Update(int newPopulation, double newBirthRateAvg, double newDeathRateAvg, double newMutationRateAvg, int newSpeedAvg, int newSizeAvg)
         {
-            if (isDead)
+            if (isDead || !IsEnabled)
             {
                 return;
             }
@@ -315,6 +315,7 @@ namespace Natural_Selection_Sim.ViewModels
         public void Reset()
         {
             LineChartVM.Series.Remove(Series);
+            PopulationCurrent = 0;
             populationTrend.Clear();
             SetDefaultStartData();
             BirthRateAvg = 0;

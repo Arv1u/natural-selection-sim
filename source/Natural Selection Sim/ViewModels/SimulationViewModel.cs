@@ -118,7 +118,7 @@ namespace Natural_Selection_Sim.ViewModels
         /// </summary>
         private void Run(object? sender, EventArgs e) // call this method to simulate one time step
         {
-            if (Herbivore.isDead && Carnivore.isDead && Omnivore.isDead)
+            if (enabledSpecies.TrueForAll(s => s.isDead == true))
             {
                 PauseCommand.Execute(null);
                 return;
@@ -130,7 +130,7 @@ namespace Natural_Selection_Sim.ViewModels
             Herbivore.Update(stats.Herbivores.Count, Math.Round(stats.Herbivores.AvgBirthRate, 2), Math.Round(stats.Herbivores.AvgDeathRate, 2), Math.Round(stats.Herbivores.AvgMutationRate, 2), Convert.ToInt32(stats.Herbivores.AvgSpeed), Convert.ToInt32(stats.Herbivores.AvgSize));
             Omnivore.Update(stats.Omnivores.Count, Math.Round(stats.Omnivores.AvgBirthRate, 2), Math.Round(stats.Omnivores.AvgDeathRate, 2), Math.Round(stats.Omnivores.AvgMutationRate, 2), Convert.ToInt32(stats.Omnivores.AvgSpeed), Convert.ToInt32(stats.Omnivores.AvgSize));
             Carnivore.Update(stats.Carnivores.Count, Math.Round(stats.Carnivores.AvgBirthRate, 2), Math.Round(stats.Carnivores.AvgDeathRate, 2), Math.Round(stats.Carnivores.AvgMutationRate, 2), Convert.ToInt32(stats.Carnivores.AvgSpeed), Convert.ToInt32(stats.Carnivores.AvgSize));
-            //call these with appropiately calculated data to update the UI
+
             CurrentTimeStep++;
         }
         /// <summary>
@@ -144,32 +144,38 @@ namespace Natural_Selection_Sim.ViewModels
             {
                 StartPopulations();
                 IsReset = false;
-            }
-            var config = new SimulationConfig
-            {
-                PlantsPerStep = AvailableFood,//Hier fehlt noch der UI Teil zum einstellen
-                Herbivore = new SpeciesConfig { StartCount = Herbivore.PopulationStart, BirthRate = Herbivore.BirthRateStart, DeathRate = Herbivore.DeathRateStart, MutationRate = Herbivore.MutationRateStart, Speed = Herbivore.SpeedStart, Size = Herbivore.SizeStart },
-                Omnivore = new SpeciesConfig { StartCount = Omnivore.PopulationStart, BirthRate = Omnivore.BirthRateStart, DeathRate = Omnivore.DeathRateStart, MutationRate = Omnivore.MutationRateStart, Speed = Omnivore.SpeedStart, Size = Omnivore.SizeStart },
-                Carnivore = new SpeciesConfig { StartCount = Carnivore.PopulationStart, BirthRate = Carnivore.BirthRateStart, DeathRate = Carnivore.DeathRateStart, MutationRate = Carnivore.MutationRateStart, Speed = Carnivore.SpeedStart, Size = Carnivore.SizeStart }
-            };
 
-            simulation = new SimulationController(config);
-            stats = new SimulationStats();
+                var config = new SimulationConfig
+                {
+                    PlantsPerStep = AvailableFood,//Hier fehlt noch der UI Teil zum einstellen
+                    Herbivore = new SpeciesConfig { StartCount = Herbivore.PopulationStart, BirthRate = Herbivore.BirthRateStart, DeathRate = Herbivore.DeathRateStart, MutationRate = Herbivore.MutationRateStart, Speed = Herbivore.SpeedStart, Size = Herbivore.SizeStart },
+                    Omnivore = new SpeciesConfig { StartCount = Omnivore.PopulationStart, BirthRate = Omnivore.BirthRateStart, DeathRate = Omnivore.DeathRateStart, MutationRate = Omnivore.MutationRateStart, Speed = Omnivore.SpeedStart, Size = Omnivore.SizeStart },
+                    Carnivore = new SpeciesConfig { StartCount = Carnivore.PopulationStart, BirthRate = Carnivore.BirthRateStart, DeathRate = Carnivore.DeathRateStart, MutationRate = Carnivore.MutationRateStart, Speed = Carnivore.SpeedStart, Size = Carnivore.SizeStart }
+                };
+
+                simulation = new SimulationController(config);
+                stats = new SimulationStats();
+            }
             IsRunning = true;
 
         }
+        private List<SpeciesData> enabledSpecies;
         private void StartPopulations()
         {
+            enabledSpecies = new();
             if (Herbivore.IsEnabled)
             {
+                enabledSpecies.Add(Herbivore);
                 Herbivore.Start();
             }
             if (Omnivore.IsEnabled)
             {
+                enabledSpecies.Add(Omnivore);
                 Omnivore.Start();
             }
             if (Carnivore.IsEnabled)
             {
+                enabledSpecies.Add(Carnivore);
                 Carnivore.Start();
             }
         }
