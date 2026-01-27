@@ -65,7 +65,6 @@ namespace Natural_Selection_Sim
 
             foreach (var e in entities)
                 e.Reset();
-            
         }
 
         public SimulationStats GetStats()
@@ -90,18 +89,17 @@ namespace Natural_Selection_Sim
             s.AvgSize = list.Average(e => e.Size);
             s.AvgBirthRate = list.Average(e => e.BirthRate);
             s.AvgDeathRate = list.Average(e => e.DeathRate);
-            s.AvgMutationRate = list.Average(e => e.MutationRate);
         }
     }
 
     public class SpeciesConfig
     {
         public int StartCount;
-        public double BirthRate;
-        public double DeathRate;
-        public double MutationRate;
-        public double Speed;
-        public double Size;
+        public float BirthRate;
+        public float DeathRate;
+        public float MutationRate;
+        public float Speed;
+        public float Size;
     }
 
     public class SimulationConfig
@@ -122,10 +120,9 @@ namespace Natural_Selection_Sim
     public class SpeciesStats
     {
         public int Count;
-        public double AvgSpeed;
-        public double AvgSize;
-        public double AvgBirthRate;
-        public double AvgDeathRate;
-        public double AvgMutationRate;
+        public float AvgSpeed;
+        public float AvgSize;
+        public float AvgBirthRate;
+        public float AvgDeathRate;
     }
 }

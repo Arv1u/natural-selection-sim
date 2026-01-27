@@ -2,7 +2,7 @@ namespace Natural_Selection_Sim
 {
     public class Carnivore : Entity
     {
-        public Carnivore(double b, double d, double m, double s, double z)
+        public Carnivore(float b, float d, float m, float s, float z)
             : base(b, d, m, s, z) { }
 
         public Carnivore(Entity parent)

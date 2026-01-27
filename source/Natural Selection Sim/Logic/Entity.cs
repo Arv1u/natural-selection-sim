@@ -7,16 +7,16 @@ namespace Natural_Selection_Sim
     {
         protected static Random rng = new Random();
 
-        public double BirthRate;
-        public double DeathRate;
-        public double MutationRate;
-        public double Speed;
-        public double Size;
+        public float BirthRate;
+        public float DeathRate;
+        public float MutationRate;
+        public float Speed;
+        public float Size;
 
         public bool HasEaten { get; protected set; }
         public bool IsAlive { get; set; } = true;
 
-        protected Entity(double b, double d, double m, double s, double z)
+        protected Entity(float b, float d, float m, float s, float z)
         {
             BirthRate = b;
             DeathRate = d;
@@ -34,10 +34,10 @@ namespace Natural_Selection_Sim
             Size = Mutate(parent.Size);
         }
 
-        protected double Mutate(double value)
+        protected float Mutate(float value)
         {
-            double factor = 1 + ((rng.NextDouble() * 2 - 1) * MutationRate);
-            return Math.Max(0.01, value * factor);
+            float factor = 1f + (float)((rng.NextDouble() * 2 - 1) * MutationRate);
+            return Math.Max(0.01f, value * factor);
         }
 
         public abstract void Act(List<Entity> entities, ref int plants);
