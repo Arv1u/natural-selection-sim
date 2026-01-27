@@ -3,6 +3,7 @@ using LiveChartsCore.SkiaSharpView.Painting;
 using Natural_Selection_Sim.MVVM;
 using SkiaSharp;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 namespace Natural_Selection_Sim.ViewModels
 {
     /// <summary>
@@ -64,6 +65,7 @@ namespace Natural_Selection_Sim.ViewModels
             {
                 populationStart = value;
                 OnPropertyChanged();
+                Debug.WriteLine("Staring Pop: " + value);
             }
         }
 
@@ -215,7 +217,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged(nameof(SizeAvg));
             }
         }
-
+        public bool isDead = false;
         #endregion
         public SpeciesData(string name,SKColor color, LineChartViewModel lineChartVM, SimulationViewModel simulationVM)
         {
@@ -241,6 +243,7 @@ namespace Natural_Selection_Sim.ViewModels
         /// </summary>
         public void Start()
         {
+            isDead = false;
             Series = new()
             {
                 Name = this.Name,
@@ -251,13 +254,24 @@ namespace Natural_Selection_Sim.ViewModels
                 IsVisibleAtLegend = true,
                 Stroke = new SolidColorPaint(color)
             };
-            LineChartVM.AddSeries(Series);    
+            LineChartVM.AddSeries(Series);
+            PopulationCurrent = PopulationStart;
         }
         /// <summary>
         /// Updates properties with current simulation data.
         /// </summary>
         public void Update(int newPopulation, double newBirthRateAvg, double newDeathRateAvg, double newMutationRateAvg, int newSpeedAvg, int newSizeAvg)
         {
+            if (isDead)
+            {
+                return;
+            }
+            if (PopulationCurrent + newPopulation <= 0)
+            {
+                isDead = true;
+                PopulationCurrent = 0;
+                return;
+            }
             PopulationCurrent = newPopulation;
             BirthRateAvg = newBirthRateAvg;
             DeathRateAvg = newDeathRateAvg;
@@ -270,16 +284,25 @@ namespace Natural_Selection_Sim.ViewModels
         /// </summary>
         public void UpdateDummyData() 
         {
-            
+            if (isDead)
+            {
+                return;
+            }
             Random rand = new Random();
             
-            double newBirthRateAvg = rand.NextDouble() * 0.5 + 0.1; 
-            double newDeathRateAvg = rand.NextDouble() * 0.5 + 0.1; 
-            double newMutationRateAvg = rand.NextDouble() * 0.5 + 0.1; 
+            double newBirthRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1,2); 
+            double newDeathRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1, 2); 
+            double newMutationRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1, 2); 
             int newSpeedAvg = rand.Next(1, 10); 
             int newSizeAvg = rand.Next(5, 15); 
-         
-            PopulationCurrent += rand.Next(-10, +11);
+            int randPopChange = rand.Next(-10, +11);
+            if(PopulationCurrent + randPopChange <= 0)
+            {
+                isDead = true;
+                PopulationCurrent = 0;
+                return;
+            }
+            PopulationCurrent += randPopChange;
             BirthRateAvg = newBirthRateAvg;
             DeathRateAvg = newDeathRateAvg;
             MutationRateAvg = newMutationRateAvg;
@@ -294,7 +317,6 @@ namespace Natural_Selection_Sim.ViewModels
             LineChartVM.Series.Remove(Series);
             populationTrend.Clear();
             SetDefaultStartData();
-            PopulationCurrent = 0;
             BirthRateAvg = 0;
             DeathRateAvg = 0;
             MutationRateAvg = 0;

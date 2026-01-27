@@ -2,7 +2,7 @@ namespace Natural_Selection_Sim
 {
     public class Omnivore : Entity
     {
-        public Omnivore(float b, float d, float m, float s, float z)
+        public Omnivore(double b, double d, double m, double s, double z)
             : base(b, d, m, s, z) { }
 
         public Omnivore(Entity parent)
