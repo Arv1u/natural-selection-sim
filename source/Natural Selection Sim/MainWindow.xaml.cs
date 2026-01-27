@@ -15,7 +15,5 @@ namespace Natural_Selection_Sim
             InitializeComponent();
             DataContext = new SimulationViewModel();
         }
-
-
     }   
 }
