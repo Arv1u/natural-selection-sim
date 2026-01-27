@@ -26,7 +26,9 @@ namespace Natural_Selection_Sim.ViewModels
                 Name = "Time",
                 TextSize = 14,
                 NamePaint = new SolidColorPaint(SKColors.White),
-                LabelsPaint = new SolidColorPaint(SKColors.Gray)
+                LabelsPaint = new SolidColorPaint(SKColors.Gray),
+                MinLimit = 0,
+                MinStep = 1
             }
         };
 
@@ -41,8 +43,8 @@ namespace Natural_Selection_Sim.ViewModels
                 TextSize = 14,
                 NamePaint = new SolidColorPaint(SKColors.White),
                 LabelsPaint = new SolidColorPaint(SKColors.Gray),
-                MinStep = 1,
-                MinLimit = 0
+                MinLimit = 0,
+                MinStep = 1
             }
         };
 
