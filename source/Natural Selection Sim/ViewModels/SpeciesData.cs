@@ -223,6 +223,7 @@ namespace Natural_Selection_Sim.ViewModels
             }
         }
         public bool isDead = false;
+
         #endregion
         public SpeciesData(string name,SKColor color, LineChartViewModel lineChartVM, SimulationViewModel simulationVM)
         {

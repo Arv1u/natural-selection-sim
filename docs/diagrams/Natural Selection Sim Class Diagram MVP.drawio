@@ -43,7 +43,7 @@
         <mxCell id="f1PKEKfvu-kje2w0hwcA-1" value="LineChartViewModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1100" y="680" width="430" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="f1PKEKfvu-kje2w0hwcA-2" value="&lt;div&gt;+ Series ObservableCOllection&amp;lt;LineSeries&amp;lt;int&amp;gt;&amp;gt; {get; set;}&lt;/div&gt;&lt;div&gt;+ XAxes : Axis[] {get; set;}&lt;/div&gt;&lt;div&gt;+ YAxes : Axis[] {get; set;}&lt;/div&gt;+ LegendTextPaint : SolidColorPaint {get;}" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="f1PKEKfvu-kje2w0hwcA-1" vertex="1">
+        <mxCell id="f1PKEKfvu-kje2w0hwcA-2" value="&lt;div&gt;+ Series ObservableCollection&amp;lt;LineSeries&amp;lt;int&amp;gt;&amp;gt; {get; set;}&lt;/div&gt;&lt;div&gt;+ XAxes : Axis[] {get; set;}&lt;/div&gt;&lt;div&gt;+ YAxes : Axis[] {get; set;}&lt;/div&gt;+ LegendTextPaint : SolidColorPaint {get;}" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="f1PKEKfvu-kje2w0hwcA-1" vertex="1">
           <mxGeometry y="26" width="430" height="74" as="geometry" />
         </mxCell>
         <mxCell id="f1PKEKfvu-kje2w0hwcA-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="f1PKEKfvu-kje2w0hwcA-1" vertex="1">
@@ -241,6 +241,36 @@
         <mxCell id="RSZG42m0OOo_Epqa3w8J-24" value="LineChartVM" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-15">
           <mxGeometry x="0.44" y="-1" relative="1" as="geometry">
             <mxPoint x="-39" y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-34" value="Series&amp;lt;List&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-15">
+          <mxGeometry x="-0.696" y="3" relative="1" as="geometry">
+            <mxPoint x="-43" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-25" value="omposition v aggretgations" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1150" y="440" as="sourcePoint" />
+            <mxPoint x="1230" y="440" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WbfTQSkP7nmSvMJKy6nf-15" target="f1PKEKfvu-kje2w0hwcA-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="670" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="760" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-32" value="LineChartViewModel" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-31">
+          <mxGeometry x="0.8271" relative="1" as="geometry">
+            <mxPoint x="-9" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-33" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-31">
+          <mxGeometry x="0.9288" y="-2" relative="1" as="geometry">
+            <mxPoint y="8" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
