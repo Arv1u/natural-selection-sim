@@ -13,6 +13,7 @@ namespace Natural_Selection_Sim.ViewModels
     {
         // reference needed to notify SimulationViewModel when IsEnabled has changed
         private readonly SimulationViewModel simulationVM; 
+
         private LineChartViewModel LineChartVM { get; set; }
 
         /// <summary>

@@ -1,20 +1,20 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
   <diagram name="Page-1" id="QTisl8CbdptH9HzlRl30">
-    <mxGraphModel dx="983" dy="1680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1426" dy="1941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="WbfTQSkP7nmSvMJKy6nf-15" value="SimulationViewModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="610" y="170" width="290" height="280" as="geometry" />
+          <mxGeometry x="610" y="170" width="290" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="WbfTQSkP7nmSvMJKy6nf-16" value="+ LineChartViewModel : LineChartViewModel{get; ;}&lt;div&gt;+ Herbivore : SpeciesData {get;}&lt;/div&gt;&lt;div&gt;+ Omnivore : SpeciesData {get;}&lt;/div&gt;&lt;div&gt;+ Carnivore: SpeciesData {get;}&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ TimeStepsPerSecond : int {get;set}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ CurrentTimeStep : int {get;set}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ AvailableFood : int {get; set;}&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ StartCommand : RelayCommand {get;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ PauseCommand : RelayCommand {get;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ ResetCommnd : RelayCommand {get;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- defaultAvailableFood : int {readonly}&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="WbfTQSkP7nmSvMJKy6nf-15" vertex="1">
+        <mxCell id="WbfTQSkP7nmSvMJKy6nf-16" value="+ LineChartViewModel : LineChartViewModel{get;}&lt;div&gt;+ Herbivore : SpeciesData {get;}&lt;/div&gt;&lt;div&gt;+ Omnivore : SpeciesData {get;}&lt;/div&gt;&lt;div&gt;+ Carnivore: SpeciesData {get;}&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ TimeStepsPerSecond : int {get;set}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ CurrentTimeStep : int {get;set}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ AvailableFood : int {get; set;}&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ StartCommand : RelayCommand {get;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ PauseCommand : RelayCommand {get;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ ResetCommnd : RelayCommand {get;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- defaultAvailableFood : int {readonly}&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="WbfTQSkP7nmSvMJKy6nf-15" vertex="1">
           <mxGeometry y="26" width="290" height="174" as="geometry" />
         </mxCell>
         <mxCell id="WbfTQSkP7nmSvMJKy6nf-17" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="WbfTQSkP7nmSvMJKy6nf-15" vertex="1">
           <mxGeometry y="200" width="290" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="WbfTQSkP7nmSvMJKy6nf-18" value="- Run(): void&lt;div&gt;- StartSimulation(): void&lt;/div&gt;&lt;div&gt;- PauseSimulation(): void&lt;/div&gt;&lt;div&gt;- ResetSimulation(): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="WbfTQSkP7nmSvMJKy6nf-15" vertex="1">
-          <mxGeometry y="208" width="290" height="72" as="geometry" />
+        <mxCell id="WbfTQSkP7nmSvMJKy6nf-18" value="- Run(): void&lt;div&gt;- StartSimulation(): void&lt;/div&gt;&lt;div&gt;- PauseSimulation(): void&lt;/div&gt;&lt;div&gt;- ResetSimulation(): void&lt;/div&gt;&lt;div&gt;- RunningRaiseExecuteChanged() : void&lt;/div&gt;&lt;div&gt;- UpdateTimerInterval( stepsPerSecond : int) : void&lt;/div&gt;&lt;div&gt;- UpdateTimerState(state : bool) : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="WbfTQSkP7nmSvMJKy6nf-15" vertex="1">
+          <mxGeometry y="208" width="290" height="122" as="geometry" />
         </mxCell>
         <mxCell id="CSrj2HXQTZ324S2HdHpu-2" value="PropertyChangedBase{abstract}" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="820" y="-300" width="370" height="86" as="geometry" />
@@ -29,19 +29,19 @@
           <mxGeometry y="60" width="370" height="26" as="geometry" />
         </mxCell>
         <mxCell id="CSrj2HXQTZ324S2HdHpu-6" value="SpeciesData" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1070" y="100" width="460" height="420" as="geometry" />
+          <mxGeometry x="1085" y="125" width="460" height="430" as="geometry" />
         </mxCell>
-        <mxCell id="CSrj2HXQTZ324S2HdHpu-7" value="+ LineChartVM : LineChartViewModel{get;set;}&lt;div&gt;- populationTrend : ObservableCollection&amp;lt;int&amp;gt; {get;set;}{readonly}&lt;/div&gt;&lt;div&gt;+ Series : LineSeries&amp;lt;int&amp;gt; {get;set;}&lt;/div&gt;&lt;div&gt;- color : SKColor {readonly}&lt;/div&gt;&lt;div&gt;+ IsEnabled : bool {get;set;}&lt;/div&gt;&lt;div&gt;+ Name : string&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ PopulationStart : int&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ PopulationCurrent : int&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ BirthRateStart : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ BirthRateAvg : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ DeathRateStart : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ DeathRateAvg : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ MutationRateStart : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ MutationRateAvg : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ SpeedStart : int&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ SpeedAvg : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ SizeStart : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ SizeAvg : double&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="CSrj2HXQTZ324S2HdHpu-6" vertex="1">
-          <mxGeometry y="26" width="460" height="274" as="geometry" />
+        <mxCell id="CSrj2HXQTZ324S2HdHpu-7" value="+ LineChartVM : LineChartViewModel{get;set;}&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ Series : LineSeries&amp;lt;int&amp;gt; {get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ IsEnabled : bool {get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ Name : string&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ PopulationStart : int&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ PopulationCurrent : int&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ BirthRateStart : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ BirthRateAvg : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ DeathRateStart : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ DeathRateAvg : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ MutationRateStart : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ MutationRateAvg : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ SpeedStart : int&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ SpeedAvg : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ SizeStart : double&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ SizeAvg : double&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;{get;set;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;- populationTrend : ObservableCollection&amp;lt;int&amp;gt; {get;set;}{readonly}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;- color : SKColor {readonly}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;- simulationVM : SimulationViewModel {readonly}&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="CSrj2HXQTZ324S2HdHpu-6" vertex="1">
+          <mxGeometry y="26" width="460" height="284" as="geometry" />
         </mxCell>
         <mxCell id="CSrj2HXQTZ324S2HdHpu-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="CSrj2HXQTZ324S2HdHpu-6" vertex="1">
-          <mxGeometry y="300" width="460" height="8" as="geometry" />
+          <mxGeometry y="310" width="460" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="CSrj2HXQTZ324S2HdHpu-9" value="+ SpiecesData(name: string, color: SKColor, lineChartVm: LineChartViewModel)&amp;nbsp;&lt;div&gt;- SetDefaultStartData() : void&lt;/div&gt;&lt;div&gt;+ Start() : void&lt;/div&gt;&lt;div&gt;+ Update(newPopulation : int, newBirthRateAvg: double, newDeathRateAvg: double, newMutationRateAvg : double, newSpeedAvg: double, newSizeAvg: double): void&lt;/div&gt;&lt;div&gt;+ UpdateDummyData() : void&lt;/div&gt;&lt;div&gt;+ Reset() : void&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="CSrj2HXQTZ324S2HdHpu-6" vertex="1">
-          <mxGeometry y="308" width="460" height="112" as="geometry" />
+        <mxCell id="CSrj2HXQTZ324S2HdHpu-9" value="+ SpeciesData(name: string, color: SKColor, lineChartVm: LineChartViewModel)&amp;nbsp;&lt;div&gt;- SetDefaultStartData() : void&lt;/div&gt;&lt;div&gt;+ Start() : void&lt;/div&gt;&lt;div&gt;+ Update(newPopulation : int, newBirthRateAvg: double, newDeathRateAvg: double, newMutationRateAvg : double, newSpeedAvg: double, newSizeAvg: double): void&lt;/div&gt;&lt;div&gt;+ UpdateDummyData() : void&lt;/div&gt;&lt;div&gt;+ Reset() : void&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="CSrj2HXQTZ324S2HdHpu-6" vertex="1">
+          <mxGeometry y="318" width="460" height="112" as="geometry" />
         </mxCell>
         <mxCell id="f1PKEKfvu-kje2w0hwcA-1" value="LineChartViewModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1085" y="680" width="430" height="160" as="geometry" />
+          <mxGeometry x="1100" y="680" width="430" height="160" as="geometry" />
         </mxCell>
         <mxCell id="f1PKEKfvu-kje2w0hwcA-2" value="&lt;div&gt;+ Series ObservableCOllection&amp;lt;LineSeries&amp;lt;int&amp;gt;&amp;gt; {get; set;}&lt;/div&gt;&lt;div&gt;+ XAxes : Axis[] {get; set;}&lt;/div&gt;&lt;div&gt;+ YAxes : Axis[] {get; set;}&lt;/div&gt;+ LegendTextPaint : SolidColorPaint {get;}" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="f1PKEKfvu-kje2w0hwcA-1" vertex="1">
           <mxGeometry y="26" width="430" height="74" as="geometry" />
@@ -58,45 +58,40 @@
             <mxPoint x="1190" y="570" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="f1PKEKfvu-kje2w0hwcA-8" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="f1PKEKfvu-kje2w0hwcA-7" connectable="0" vertex="1">
-          <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="10" y="-10" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="f1PKEKfvu-kje2w0hwcA-9" value="0..3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="f1PKEKfvu-kje2w0hwcA-7" vertex="1" connectable="0">
           <mxGeometry x="0.7889" y="-3" relative="1" as="geometry">
             <mxPoint x="17" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="f1PKEKfvu-kje2w0hwcA-10" value="Inaccurate representation of the codebase. In reality LineChartViewModel holds references to the individual LineSeries of each SpeciesData.&lt;div&gt;The implementation of the LineSeries&amp;lt;T&amp;gt; class is hidden by the used package, so I settled with this compromise in depiction.&amp;nbsp;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="1380" y="540" width="300" height="100" as="geometry" />
+          <mxGeometry x="1390" y="560" width="300" height="100" as="geometry" />
         </mxCell>
         <mxCell id="f1PKEKfvu-kje2w0hwcA-12" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1370" y="589.5" as="sourcePoint" />
-            <mxPoint x="1310" y="589.5" as="targetPoint" />
+            <mxPoint x="1390" y="609.5" as="sourcePoint" />
+            <mxPoint x="1330" y="609.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="f1PKEKfvu-kje2w0hwcA-13" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" parent="1" source="CSrj2HXQTZ324S2HdHpu-6" target="WbfTQSkP7nmSvMJKy6nf-15" edge="1">
+        <mxCell id="f1PKEKfvu-kje2w0hwcA-13" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" parent="1" edge="1">
           <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="940" y="470" as="sourcePoint" />
-            <mxPoint x="940" y="290" as="targetPoint" />
+            <mxPoint x="1085" y="390.5" as="sourcePoint" />
+            <mxPoint x="900" y="390.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="f1PKEKfvu-kje2w0hwcA-16" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" parent="1" source="WbfTQSkP7nmSvMJKy6nf-15" target="CSrj2HXQTZ324S2HdHpu-6" edge="1">
+        <mxCell id="f1PKEKfvu-kje2w0hwcA-16" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" parent="1" edge="1">
           <mxGeometry x="-1" relative="1" as="geometry">
-            <mxPoint x="930" y="527" as="sourcePoint" />
-            <mxPoint x="730" y="480" as="targetPoint" />
+            <mxPoint x="900" y="390" as="sourcePoint" />
+            <mxPoint x="1085" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="f1PKEKfvu-kje2w0hwcA-19" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="f1PKEKfvu-kje2w0hwcA-16" vertex="1" connectable="0">
-          <mxGeometry x="-0.7976" y="2" relative="1" as="geometry">
-            <mxPoint y="-11" as="offset" />
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-20" value="simulationVM" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="f1PKEKfvu-kje2w0hwcA-16">
+          <mxGeometry x="-0.6649" y="3" relative="1" as="geometry">
+            <mxPoint x="9" y="-13" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="f1PKEKfvu-kje2w0hwcA-20" value="3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="f1PKEKfvu-kje2w0hwcA-16" vertex="1" connectable="0">
-          <mxGeometry x="0.8623" relative="1" as="geometry">
-            <mxPoint y="-10" as="offset" />
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-23" value="Carnivore" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="f1PKEKfvu-kje2w0hwcA-16">
+          <mxGeometry x="0.5676" y="1" relative="1" as="geometry">
+            <mxPoint x="5" y="-19" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="f1PKEKfvu-kje2w0hwcA-21" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" parent="1" source="WbfTQSkP7nmSvMJKy6nf-15" target="CSrj2HXQTZ324S2HdHpu-2" edge="1">
@@ -114,7 +109,7 @@
             <mxPoint x="1200" y="10" as="sourcePoint" />
             <mxPoint x="1333" y="-40" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1300" y="-40" />
+              <mxPoint x="1320" y="-40" />
               <mxPoint x="1005" y="-40" />
             </Array>
           </mxGeometry>
@@ -135,31 +130,118 @@
           <mxGeometry x="-1" relative="1" as="geometry">
             <mxPoint x="550" y="50" as="sourcePoint" />
             <mxPoint x="760" y="50" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="310" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="f1PKEKfvu-kje2w0hwcA-32" value="3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="f1PKEKfvu-kje2w0hwcA-30" vertex="1" connectable="0">
-          <mxGeometry x="0.8623" relative="1" as="geometry">
-            <mxPoint y="-10" as="offset" />
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-5" value="PauseCommand" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="f1PKEKfvu-kje2w0hwcA-30">
+          <mxGeometry x="0.855" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="f1PKEKfvu-kje2w0hwcA-33" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="f1PKEKfvu-kje2w0hwcA-30" vertex="1" connectable="0">
-          <mxGeometry x="-0.8613" y="1" relative="1" as="geometry">
-            <mxPoint y="-11" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="MrSvPVFUUS9TKQciLoAO-2" value="simulationViewModel : S&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;imulationViewModel&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="MrSvPVFUUS9TKQciLoAO-2" value="simulationViewModel : S&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;imulationViewModel&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2090" y="170" width="280" height="200" as="geometry">
             <mxRectangle x="2200" y="170" width="300" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MrSvPVFUUS9TKQciLoAO-3" value="LineChartViewModel = lineChartViewModel&lt;div&gt;Herbivore = herbivore&lt;/div&gt;&lt;div&gt;Omnivore = omnivore&lt;/div&gt;&lt;div&gt;Carnivore = carnivore&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TimeStepsPerSecond = 1&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;CurrentTimeStep = 0&lt;/span&gt;&lt;/div&gt;&lt;div&gt;AvailableFood = 100&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;StartCommand = startCommand&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PauseCommand = pauseCommand&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ResetCommnd = resetCommand&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;defaultAvailableFood = 100&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="MrSvPVFUUS9TKQciLoAO-2">
+        <mxCell id="MrSvPVFUUS9TKQciLoAO-3" value="LineChartViewModel = lineChartViewModel&lt;div&gt;Herbivore = herbivore&lt;/div&gt;&lt;div&gt;Omnivore = omnivore&lt;/div&gt;&lt;div&gt;Carnivore = carnivore&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TimeStepsPerSecond = 1&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;CurrentTimeStep = 0&lt;/span&gt;&lt;/div&gt;&lt;div&gt;AvailableFood = 100&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;StartCommand = startCommand&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PauseCommand = pauseCommand&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ResetCommnd = resetCommand&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;defaultAvailableFood = 100&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="MrSvPVFUUS9TKQciLoAO-2" vertex="1">
           <mxGeometry y="26" width="280" height="174" as="geometry" />
         </mxCell>
-        <mxCell id="MrSvPVFUUS9TKQciLoAO-10" value="speciesData : SpeciesData" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="MrSvPVFUUS9TKQciLoAO-10" value="speciesData : SpeciesData" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1800" y="170" width="240" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="MrSvPVFUUS9TKQciLoAO-11" value="LineChartVM = lineChartViewModel&lt;div&gt;populationTrend = { 33 }&lt;/div&gt;&lt;div&gt;Series = lineSeries&lt;/div&gt;&lt;div&gt;color = dataColor&lt;/div&gt;&lt;div&gt;IsEnabled = true&lt;/div&gt;&lt;div&gt;Name = &quot;Omnivore&quot;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PopulationStart = 33&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PopulationCurrent = 33&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;BirthRateStart = 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;BirthRateAvg&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;DeathRateStart&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;DeathRateAvg&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;MutationRateStart&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;MutationRateAvg&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;SpeedStart&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;SpeedAvg&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;SizeStart = 5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;SizeAvg = 5&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="MrSvPVFUUS9TKQciLoAO-10">
+        <mxCell id="MrSvPVFUUS9TKQciLoAO-11" value="LineChartVM = lineChartViewModel&lt;div&gt;populationTrend = { 33 }&lt;/div&gt;&lt;div&gt;Series = lineSeries&lt;/div&gt;&lt;div&gt;color = dataColor&lt;/div&gt;&lt;div&gt;IsEnabled = true&lt;/div&gt;&lt;div&gt;Name = &quot;Omnivore&quot;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PopulationStart = 33&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PopulationCurrent = 33&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;BirthRateStart = 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;BirthRateAvg&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;DeathRateStart&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;DeathRateAvg&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;MutationRateStart&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;MutationRateAvg&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;SpeedStart&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;SpeedAvg&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;= 0.5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;SizeStart = 5&lt;/span&gt;&lt;/div&gt;&lt;div&gt;SizeAvg = 5&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="MrSvPVFUUS9TKQciLoAO-10" vertex="1">
           <mxGeometry y="26" width="240" height="274" as="geometry" />
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-2" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.224;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.003;exitY=0.925;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="WbfTQSkP7nmSvMJKy6nf-16" target="f1PKEKfvu-kje2w0hwcA-26">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="530" y="439" as="sourcePoint" />
+            <mxPoint x="270" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="611" y="350" />
+              <mxPoint x="245" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-4" value="StartCommand" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-2">
+          <mxGeometry x="0.8877" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-3" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0.003;exitY=0.443;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="WbfTQSkP7nmSvMJKy6nf-16" target="f1PKEKfvu-kje2w0hwcA-26">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="710" y="419" as="sourcePoint" />
+            <mxPoint x="429" y="50" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="460" y="273" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-6" value="ResetCommand" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-3">
+          <mxGeometry x="0.8042" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-7" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="900" y="220" as="sourcePoint" />
+            <mxPoint x="1085" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-10" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="900" y="310" as="sourcePoint" />
+            <mxPoint x="1085" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-13" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="1085" y="220" as="sourcePoint" />
+            <mxPoint x="900" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-18" value="simulationVM" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-13">
+          <mxGeometry x="0.8054" relative="1" as="geometry">
+            <mxPoint x="22" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-21" value="Herbivore" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-13">
+          <mxGeometry x="-0.6432" relative="1" as="geometry">
+            <mxPoint y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-14" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="1085" y="310" as="sourcePoint" />
+            <mxPoint x="900" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-19" value="simulationVM" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-14">
+          <mxGeometry x="0.6649" y="-4" relative="1" as="geometry">
+            <mxPoint x="9" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-22" value="Omnivore" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-14">
+          <mxGeometry x="-0.5243" y="3" relative="1" as="geometry">
+            <mxPoint x="9" y="-23" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-15" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1" source="CSrj2HXQTZ324S2HdHpu-6" target="f1PKEKfvu-kje2w0hwcA-1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="1020" y="705" as="sourcePoint" />
+            <mxPoint x="1020" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-17" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-15">
+          <mxGeometry x="0.6444" y="4" relative="1" as="geometry">
+            <mxPoint x="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSZG42m0OOo_Epqa3w8J-24" value="LineChartVM" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSZG42m0OOo_Epqa3w8J-15">
+          <mxGeometry x="0.44" y="-1" relative="1" as="geometry">
+            <mxPoint x="-39" y="15" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
