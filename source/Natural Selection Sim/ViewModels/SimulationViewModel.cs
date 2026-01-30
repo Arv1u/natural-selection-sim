@@ -7,29 +7,30 @@ namespace Natural_Selection_Sim.ViewModels
 {
     public class SimulationViewModel : PropertyChangedBase
     {
-        // Property backing the UI's linechart
+        // Property backing the UI's linechart.
         public LineChartViewModel LineChartViewModel { get; } = new();
 
         // Simulated data for each individual species.
         public SpeciesData Herbivore { get; }
         public SpeciesData Omnivore { get; }
         public SpeciesData Carnivore { get; }
+
         private SimulationController simulation;
         private SimulationStats stats;
-        private int timeStepsPerSecond;
 
+        private int timeStepsPerSecond;
         public int TimeStepsPerSecond
         {
             get { return timeStepsPerSecond; }
             set
             {
-                simulationTimer.Interval = TimeSpan.FromMilliseconds(1000.0 / value);
+                UpdateTimerInterval(value);
                 timeStepsPerSecond = value;
                 OnPropertyChanged();
             }
         }
+        
         private int currentTimeStep;
-
         public int CurrentTimeStep
         {
             get { return currentTimeStep; }
@@ -39,6 +40,8 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged();
             }
         }
+
+        // UI state defining whether the simulation is currently running.
         private bool isRunning;
         public bool IsRunning
         {
@@ -48,12 +51,9 @@ namespace Natural_Selection_Sim.ViewModels
             }
             set
             {
-                if (value == isRunning)
-                    return;
-
                 isRunning = value;
-                simulationTimer.IsEnabled = value;
-                OnPropertyChanged(nameof(IsRunning));
+                UpdateTimerState(value);
+                OnPropertyChanged();
                 RunningRaiseExecuteChanged();
             }
         }
@@ -70,12 +70,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged();
             }
         }
-
-        // Relaycommands bind to the Command button property. They are executed on button click and define whether the button is active or not.
-        public RelayCommand StartCommand { get; }
-        public RelayCommand PauseCommand { get; }
-        public RelayCommand ResetCommand { get; }
-
+        // UI state is reset, whenever there's no active simulation, be it running or paused.
         private bool isReset;
         public bool IsReset
         {
@@ -90,8 +85,17 @@ namespace Natural_Selection_Sim.ViewModels
             }
         }
 
-        private readonly int defaultAvailableFood = 100;
+        // Relaycommands bind to the Command button property. They are executed on button click and define whether the button is active or not.
+        public RelayCommand StartCommand { get; }
+        public RelayCommand PauseCommand { get; }
+        public RelayCommand ResetCommand { get; }
+
         private readonly DispatcherTimer simulationTimer;
+
+        // Keeps track of currently enabled species. Used to stop the simulation whenever all species are extinct.
+        private List<SpeciesData> enabledSpecies;
+
+        private readonly int availableFoodDefault = 100;
         public SimulationViewModel()
         {
             StartCommand = new RelayCommand(_ => StartSimulation(), _ => Herbivore!.IsEnabled || Omnivore!.IsEnabled || Carnivore!.IsEnabled);
@@ -102,31 +106,39 @@ namespace Natural_Selection_Sim.ViewModels
             Omnivore = new("Omnivore", SKColors.Orange, LineChartViewModel, this);
             Carnivore = new("Carnivore", SKColors.Red, LineChartViewModel, this);
 
-            AvailableFood = defaultAvailableFood;
-            IsReset = true;
-            IsRunning = false;
+            AvailableFood = availableFoodDefault;
+
+            
+
             simulationTimer = new DispatcherTimer
             {
                 Interval = TimeSpan.FromSeconds(1),
                 IsEnabled = false
             };
 
+            // Set the callback called whenever the timer ticks.
             simulationTimer.Tick += Run;
+
+            IsReset = true;
+            IsRunning = false;
         }
+        
         /// <summary>
-        /// Method executed to simulate one timestep.
+        /// Method executed to simulate one timestep. Pauses the simulation whenever all species have gone extinct.
         /// </summary>
-        private void Run(object? sender, EventArgs e) // call this method to simulate one time step
+        private void Run(object? sender, EventArgs e)
         {
+            // Pause if all species are extinct.
             if (enabledSpecies.TrueForAll(s => s.isDead == true))
             {
                 PauseCommand.Execute(null);
                 return;
             }
+
             simulation.Step();
             stats = simulation.GetStats();
 
-
+            //TODO: reformat/refactor
             Herbivore.Update(stats.Herbivores.Count, Math.Round(stats.Herbivores.AvgBirthRate, 2), Math.Round(stats.Herbivores.AvgDeathRate, 2), Math.Round(stats.Herbivores.AvgMutationRate, 2), Convert.ToInt32(stats.Herbivores.AvgSpeed), Convert.ToInt32(stats.Herbivores.AvgSize));
             Omnivore.Update(stats.Omnivores.Count, Math.Round(stats.Omnivores.AvgBirthRate, 2), Math.Round(stats.Omnivores.AvgDeathRate, 2), Math.Round(stats.Omnivores.AvgMutationRate, 2), Convert.ToInt32(stats.Omnivores.AvgSpeed), Convert.ToInt32(stats.Omnivores.AvgSize));
             Carnivore.Update(stats.Carnivores.Count, Math.Round(stats.Carnivores.AvgBirthRate, 2), Math.Round(stats.Carnivores.AvgDeathRate, 2), Math.Round(stats.Carnivores.AvgMutationRate, 2), Convert.ToInt32(stats.Carnivores.AvgSpeed), Convert.ToInt32(stats.Carnivores.AvgSize));
@@ -134,7 +146,7 @@ namespace Natural_Selection_Sim.ViewModels
             CurrentTimeStep++;
         }
         /// <summary>
-        /// Executed when the start button is pressed.
+        /// Executed when the start button is pressed. Starts a new Simulation if none is running, continues the current one otherwise.
         /// </summary>
         private void StartSimulation()
         {
@@ -147,6 +159,7 @@ namespace Natural_Selection_Sim.ViewModels
 
                 var config = new SimulationConfig
                 {
+                    //TODO: reformat
                     PlantsPerStep = AvailableFood,//Hier fehlt noch der UI Teil zum einstellen
                     Herbivore = new SpeciesConfig { StartCount = Herbivore.PopulationStart, BirthRate = Herbivore.BirthRateStart, DeathRate = Herbivore.DeathRateStart, MutationRate = Herbivore.MutationRateStart, Speed = Herbivore.SpeedStart, Size = Herbivore.SizeStart },
                     Omnivore = new SpeciesConfig { StartCount = Omnivore.PopulationStart, BirthRate = Omnivore.BirthRateStart, DeathRate = Omnivore.DeathRateStart, MutationRate = Omnivore.MutationRateStart, Speed = Omnivore.SpeedStart, Size = Omnivore.SizeStart },
@@ -156,13 +169,16 @@ namespace Natural_Selection_Sim.ViewModels
                 simulation = new SimulationController(config);
                 stats = new SimulationStats();
             }
-            IsRunning = true;
 
+            IsRunning = true;
         }
-        private List<SpeciesData> enabledSpecies;
+        /// <summary>
+        /// Calls start logic of enabled species' data and tracks enabled species.
+        /// </summary>
         private void StartPopulations()
         {
             enabledSpecies = new();
+
             if (Herbivore.IsEnabled)
             {
                 enabledSpecies.Add(Herbivore);
@@ -199,12 +215,20 @@ namespace Natural_Selection_Sim.ViewModels
             Carnivore.Reset();
             Omnivore.Reset();
             CurrentTimeStep = 0;
-            AvailableFood = defaultAvailableFood;
+            AvailableFood = availableFoodDefault;
             IsReset = true;
         }
         private void RunningRaiseExecuteChanged()
         {
             ResetCommand.RaiseCanExecuteChanged();
+        }
+        private void UpdateTimerInterval(int stepsPerSecond)
+        {
+            simulationTimer.Interval = TimeSpan.FromMilliseconds(1000.0 / stepsPerSecond);
+        }
+        private void UpdateTimerState(bool state)
+        {
+            simulationTimer.IsEnabled = state;
         }
     }
 }

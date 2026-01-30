@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 namespace Natural_Selection_Sim.ViewModels
 {
     /// <summary>
-    ///	Needed to bind data to the UI linechart. Contains definitions for axes, legend and linechart data.
+    ///	Backing property for a cartesian chart. Contains definitions for axes, legend and linechart data.
     /// </summary>
     public class LineChartViewModel : PropertyChangedBase
     {

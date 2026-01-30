@@ -11,11 +11,12 @@ namespace Natural_Selection_Sim.ViewModels
     /// </summary>
     public class SpeciesData : PropertyChangedBase
     {
-        private readonly SimulationViewModel simulationVM; // reference needed to notify SimulationViewModel when IsEnabled has changed
+        // reference needed to notify SimulationViewModel when IsEnabled has changed
+        private readonly SimulationViewModel simulationVM; 
         private LineChartViewModel LineChartVM { get; set; }
 
         /// <summary>
-        /// History of the population trend. 1 index = 1 timestep
+        /// History of the population trend. 1 index = 1 timestep.
         /// </summary>
         private readonly ObservableCollection<int> populationTrend = new() { };
 
@@ -39,6 +40,8 @@ namespace Natural_Selection_Sim.ViewModels
             {
                 isEnabled = value;
                 OnPropertyChanged(nameof(IsEnabled));
+
+                // Notify start button that execute conditions have changed.
                 simulationVM.StartCommand.RaiseCanExecuteChanged();
             }
         }
@@ -65,6 +68,7 @@ namespace Natural_Selection_Sim.ViewModels
             {
                 populationStart = value;
                 OnPropertyChanged();
+
                 Debug.WriteLine("Staring Pop: " + value);
             }
         }
@@ -262,47 +266,22 @@ namespace Natural_Selection_Sim.ViewModels
         /// </summary>
         public void Update(int newPopulation, double newBirthRateAvg, double newDeathRateAvg, double newMutationRateAvg, int newSpeedAvg, int newSizeAvg)
         {
+            // Skip update if species is dead or not enabled.
             if (isDead || !IsEnabled)
             {
                 return;
             }
+
+            // Check if species goes extinct with the new pop-change.
             if (PopulationCurrent + newPopulation <= 0)
             {
                 isDead = true;
                 PopulationCurrent = 0;
                 return;
             }
+
+            // Update UI-bound properties with new values
             PopulationCurrent = newPopulation;
-            BirthRateAvg = newBirthRateAvg;
-            DeathRateAvg = newDeathRateAvg;
-            MutationRateAvg = newMutationRateAvg;
-            SpeedAvg = newSpeedAvg;
-            SizeAvg = newSizeAvg;
-        }
-        /// <summary>
-        /// Updates properties with dummy data for testing purposes.
-        /// </summary>
-        public void UpdateDummyData() 
-        {
-            if (isDead)
-            {
-                return;
-            }
-            Random rand = new Random();
-            
-            double newBirthRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1,2); 
-            double newDeathRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1, 2); 
-            double newMutationRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1, 2); 
-            int newSpeedAvg = rand.Next(1, 10); 
-            int newSizeAvg = rand.Next(5, 15); 
-            int randPopChange = rand.Next(-10, +11);
-            if(PopulationCurrent + randPopChange <= 0)
-            {
-                isDead = true;
-                PopulationCurrent = 0;
-                return;
-            }
-            PopulationCurrent += randPopChange;
             BirthRateAvg = newBirthRateAvg;
             DeathRateAvg = newDeathRateAvg;
             MutationRateAvg = newMutationRateAvg;
@@ -315,14 +294,48 @@ namespace Natural_Selection_Sim.ViewModels
         public void Reset()
         {
             LineChartVM.Series.Remove(Series);
+
+            // Current pop has to be set to 0 BEFORE clearing populationTrend. Else a single 0 will be left in pop-trend.
             PopulationCurrent = 0;
             populationTrend.Clear();
+
             SetDefaultStartData();
+
             BirthRateAvg = 0;
             DeathRateAvg = 0;
             MutationRateAvg = 0;
             SpeedAvg = 0;
             SizeAvg = 0;
         }
+        ///// <summary>
+        ///// Updates properties with dummy data for testing purposes.
+        ///// </summary>
+        //public void UpdateDummyData() 
+        //{
+        //    if (isDead)
+        //    {
+        //        return;
+        //    }
+        //    Random rand = new Random();
+            
+        //    double newBirthRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1,2); 
+        //    double newDeathRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1, 2); 
+        //    double newMutationRateAvg = Math.Round(rand.NextDouble() * 0.5 + 0.1, 2); 
+        //    int newSpeedAvg = rand.Next(1, 10); 
+        //    int newSizeAvg = rand.Next(5, 15); 
+        //    int randPopChange = rand.Next(-10, +11);
+        //    if(PopulationCurrent + randPopChange <= 0)
+        //    {
+        //        isDead = true;
+        //        PopulationCurrent = 0;
+        //        return;
+        //    }
+        //    PopulationCurrent += randPopChange;
+        //    BirthRateAvg = newBirthRateAvg;
+        //    DeathRateAvg = newDeathRateAvg;
+        //    MutationRateAvg = newMutationRateAvg;
+        //    SpeedAvg = newSpeedAvg;
+        //    SizeAvg = newSizeAvg;
+        //}
     }
 }
