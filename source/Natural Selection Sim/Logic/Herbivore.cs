@@ -8,7 +8,7 @@ namespace Natural_Selection_Sim
         public Herbivore(Entity parent)
             : base(parent) { }
 
-        public override void Act(List<Entity> entities, ref int plants)
+        public override void Act(List<Entity> entities, ref int plants)//Fressen von Pflanzen
         {
             if (plants > 0)
             {
@@ -17,7 +17,7 @@ namespace Natural_Selection_Sim
             }
         }
 
-        protected override Entity CreateChild()
+        protected override Entity CreateChild()//Erstellt ein neues Herbivore objekt
         {
             return new Herbivore(this);
         }

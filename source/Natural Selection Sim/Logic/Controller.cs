@@ -6,10 +6,10 @@ namespace Natural_Selection_Sim
 {
     public class SimulationController
     {
-        private List<Entity> entities = new List<Entity>();
+        private List<Entity> entities = new List<Entity>();//Liste für alle Entitys
         private int plantsPerStep;
 
-        public SimulationController(SimulationConfig config)
+        public SimulationController(SimulationConfig config)//Construcktor für die Simulation
         {
             plantsPerStep = config.PlantsPerStep;
 
@@ -18,7 +18,7 @@ namespace Natural_Selection_Sim
             CreateSpecies<Omnivore>(config.Omnivore);
         }
 
-        private void CreateSpecies<T>(SpeciesConfig cfg) where T : Entity
+        private void CreateSpecies<T>(SpeciesConfig cfg) where T : Entity//Erstellt die Startpopulation der jeweiligen Species
         {
             for (int i = 0; i < cfg.StartCount; i++)
             {
@@ -35,19 +35,19 @@ namespace Natural_Selection_Sim
             }
         }
 
-        public void Step()
+        public void Step()//Simuliert einen Zeitschritt
         {
             int plants = plantsPerStep;
 
-            entities.Sort((a, b) => b.Speed.CompareTo(a.Speed));
+            entities.Sort((a, b) => b.Speed.CompareTo(a.Speed));//Sortierung nach Speed damit schnellere Entitys zuerst handeln
 
-            foreach (var e in entities)
+            foreach (var e in entities)//Entitys dürfen handeln
                 if (e.IsAlive)
                     e.Act(entities, ref plants);
 
-            List<Entity> newborns = new List<Entity>();
+            List<Entity> newborns = new List<Entity>();//Neue Liste für Kinder
 
-            foreach (var e in entities)
+            foreach (var e in entities) //Entitys dürfen sich vermehren
             {
                 if (!e.IsAlive) continue;
 
@@ -56,19 +56,19 @@ namespace Natural_Selection_Sim
                     newborns.Add(child);
             }
 
-            foreach (var e in entities)
+            foreach (var e in entities)//Entitys die nicht gegessen haben sterben
                 if (!e.HasEaten)
                     e.IsAlive = false;
 
-            entities.RemoveAll(e => !e.IsAlive);
-            entities.AddRange(newborns);
+            entities.RemoveAll(e => !e.IsAlive);//Entfernt alle toten Entitys aus der Liste
+            entities.AddRange(newborns);//Fügt die Kinder zur Entity liste hinzu
 
-            foreach (var e in entities)
+            foreach (var e in entities)//Flags für das nächste Runde zurücksetzen
                 e.Reset();
             
         }
 
-        public SimulationStats GetStats()
+        public SimulationStats GetStats()//Gibt Statistiken über die aktuelle Simulation zurück
         {
             SimulationStats stats = new SimulationStats();
 
@@ -79,7 +79,7 @@ namespace Natural_Selection_Sim
             return stats;
         }
 
-        private void FillStats<T>(SpeciesStats s) where T : Entity
+        private void FillStats<T>(SpeciesStats s) where T : Entity//Füllt die Statistiken für die jeweilige Species
         {
             var list = entities.OfType<T>().ToList();
             s.Count = list.Count;
@@ -94,7 +94,7 @@ namespace Natural_Selection_Sim
         }
     }
 
-    public class SpeciesConfig
+    public class SpeciesConfig//Konfigurationsklasse für die Species
     {
         public int StartCount;
         public double BirthRate;
@@ -104,7 +104,7 @@ namespace Natural_Selection_Sim
         public double Size;
     }
 
-    public class SimulationConfig
+    public class SimulationConfig//Konfigurationsklasse für die Simulation
     {
         public int PlantsPerStep;
         public SpeciesConfig Carnivore = new SpeciesConfig();
@@ -112,14 +112,14 @@ namespace Natural_Selection_Sim
         public SpeciesConfig Omnivore = new SpeciesConfig();
     }
 
-    public class SimulationStats
+    public class SimulationStats//Statistiken über die Simulation
     {
         public SpeciesStats Carnivores = new SpeciesStats();
         public SpeciesStats Herbivores = new SpeciesStats();
         public SpeciesStats Omnivores = new SpeciesStats();
     }
 
-    public class SpeciesStats
+    public class SpeciesStats//Statistiken über eine Species
     {
         public int Count;
         public double AvgSpeed;

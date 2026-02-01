@@ -10,7 +10,7 @@ namespace Natural_Selection_Sim
 
         public override void Act(List<Entity> entities, ref int plants)
         {
-            var possibleTargets = entities.FindAll(e =>
+            var possibleTargets = entities.FindAll(e => // Erstellt eine liste mit allen Entity die Gefressen werden können
                 e != this &&
                 e.IsAlive &&
                 e.Speed < Speed &&
@@ -19,12 +19,12 @@ namespace Natural_Selection_Sim
 
             if (possibleTargets.Count == 0) return;
 
-            var target = possibleTargets[rng.Next(possibleTargets.Count)];
+            var target = possibleTargets[rng.Next(possibleTargets.Count)];//sucht sich zufällig ein target aus der liste aus
             target.IsAlive = false;
             HasEaten = true;
         }
 
-        protected override Entity CreateChild()
+        protected override Entity CreateChild()//Erstellt ein neues Carnivore objekt
         {
             return new Carnivore(this);
         }

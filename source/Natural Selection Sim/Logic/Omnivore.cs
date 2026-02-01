@@ -8,7 +8,7 @@ namespace Natural_Selection_Sim
         public Omnivore(Entity parent)
             : base(parent) { }
 
-        public override void Act(List<Entity> entities, ref int plants)
+        public override void Act(List<Entity> entities, ref int plants)//Fressen von Pflanzen danach andere Entitys
         {
             if (plants > 0)
             {
