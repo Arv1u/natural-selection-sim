@@ -70,7 +70,7 @@ namespace Natural_Selection_Sim.ViewModels
                 OnPropertyChanged();
             }
         }
-        // UI state is reset, whenever there's no active simulation, be it running or paused.
+        // UI state is reset whenever there's no active simulation, be it running or paused.
         private bool isReset;
         public bool IsReset
         {
@@ -92,7 +92,7 @@ namespace Natural_Selection_Sim.ViewModels
 
         private readonly DispatcherTimer simulationTimer;
 
-        // Keeps track of currently enabled species. Used to stop the simulation whenever all species are extinct.
+        // Keeps track of current enabled species. Used to stop the simulation whenever all species are extinct.
         private List<SpeciesData> enabledSpecies;
 
         private readonly int availableFoodDefault = 100;

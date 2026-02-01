@@ -37,6 +37,11 @@ namespace Natural_Selection_Sim
         protected double Mutate(double value)//Mutiert die Werte
         {
             double factor = 1.0 + ((rng.NextDouble() * 2.0 - 1.0) * MutationRate);
+
+            //TODO: refactor. Quick and dirty int overflow fix.
+            if (value * factor >= 2000000000)
+                return value;
+
             return Math.Max(0.01, value * factor);
         }
 
